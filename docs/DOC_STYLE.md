@@ -1,14 +1,19 @@
-# DOC_STYLE.md
+# Documentation Style (v1.0)
 
-Documentation formatting rules.
+## Output constraints
 
-## Required
-- Escape inline backticks as \`\\\`\`.
-- Never output literal \`\`\` inside a codeblock; write it as \`\\\`\\\`\\\`\`.
-- Keep sections short and linkable.
-- Prefer tables for contracts.
-- Mermaid diagrams must use a GitHub-safe subset.
+- Prefer short, direct sentences.
+- Use consistent headings and terminology from TERMINOLOGY.md.
+- Avoid inventing behavior. Cite existing canon in the repo.
 
-## Forbidden
-- Unescaped inline backticks that can break downstream rendering
-- Nested code fences
+## Formatting rule: inline backticks
+
+When writing markdown that contains inline code, escape inline backticks as \`.
+
+Example:
+- Write \`someIdentifier\` rather than unescaped inline backticks.
+
+## Formatting rule: do not nest code fences
+
+Do not place triple backticks inside a fenced code block.
+If you must refer to triple backticks literally, write them as \`\`\`.
