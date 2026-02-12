@@ -12,7 +12,7 @@ Task groups are subordinate to canonical documents.
 
 ## How Task Groups Are Used
 1. Classify into exactly one task group.
-2. If skills are allowed, consult \`Jules/skills/SKILLS_INDEX.md\`.
+2. If skills are allowed, consult \`Jules/SKILLS_INDEX.md\`.
 3. If ambiguous or mixed, STOP and ask or refuse.
 
 ## Defined Task Groups

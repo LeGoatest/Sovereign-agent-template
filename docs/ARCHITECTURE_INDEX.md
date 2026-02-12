@@ -28,5 +28,5 @@ If documents conflict, the higher-precedence document wins.
 ## Agent Governance
 - ../Jules/JULES.md
 - ../Jules/TASK_GROUPS.md
-- ../Jules/skills/SKILLS_INDEX.md
+- ../Jules/SKILLS_INDEX.md
 - ../Jules/specs/_template/

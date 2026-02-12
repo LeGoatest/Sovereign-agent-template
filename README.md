@@ -25,7 +25,7 @@ This template provides:
 3. docs/SECURITY_MODEL.md
 4. Jules/JULES.md
 5. Jules/TASK_GROUPS.md
-6. Jules/skills/SKILLS_INDEX.md
+6. Jules/SKILLS_INDEX.md
 7. Jules/skills/*/SKILL.md
 8. Jules/specs/** (non-canonical, execution workspaces)
 
