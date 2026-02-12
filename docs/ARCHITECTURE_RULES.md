@@ -28,14 +28,10 @@ This file is law, not a tutorial.
 
 ## Allowed change surface
 
-- `Jules/specs/**` for planning and execution workspaces.
-- `Jules/skills/**` for procedural skill definitions.
-- `docs/**` only when explicitly updating governance/canon.
-- Top-level bootstrap and onboarding docs (`README.md`, `NEW_PROJECT.md`, `BOOTSTRAP.md`).
-- <fill in project-specific forbidden patterns here>
-
-## Allowed change surface
-
+- \`Jules/specs/**\` for planning and execution workspaces.
+- \`Jules/skills/**\` for procedural skill definitions.
+- \`docs/**\` only when explicitly updating governance/canon.
+- Top-level bootstrap and onboarding docs (\`README.md\`, \`NEW_PROJECT.md\`, \`BOOTSTRAP.md\`).
 - <list paths and modules agents may modify safely>
 
 ## Refusal triggers
