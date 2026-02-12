@@ -1,32 +1,30 @@
 ---
 name: spec-mode
-description: Create a spec workspace (requirements, design, tasks) and optionally execute tasks.md step-by-step.
-authority: procedural
-task_group: docs
+description: Create a spec workspace (requirements, design, tasks) and optionally execute tasks.md step-by-step for non-trivial work.
 ---
 
 # Skill: spec-mode
 
-## Authority Boundary
-Procedural workflow only.
-Does NOT introduce architecture and does NOT redefine invariants.
-If the request becomes \`architecture\` or requires design judgment, STOP.
+## Authority boundary
 
-## Workspace Layout (Required)
-Create:
+This skill is procedural only.
+It must not introduce architecture or modify invariants.
+If design judgment is required, stop.
+
+## Procedure
+
+1) Create a spec workspace:
 - \`Jules/specs/<feature>/requirements.md\`
 - \`Jules/specs/<feature>/design.md\`
 - \`Jules/specs/<feature>/tasks.md\`
 
-Use templates from:
+2) Use templates from:
 - \`Jules/specs/_template/\`
 
-## Procedure
-1. Classify request using \`Jules/TASK_GROUPS.md\`.
-2. If \`architecture\`, STOP.
-3. Generate tasks with:
-   - task-group
-   - skill (or none)
-   - outputs
-4. Execute tasks ONLY if explicitly requested.
-5. Mark tasks with \`[x]\` and add a one-line result note.
+3) Author tasks:
+Each task must include:
+- task-group (exactly one)
+- skill (or none)
+- outputs (file paths)
+
+4) Execute tasks only if explicitly instructed.
