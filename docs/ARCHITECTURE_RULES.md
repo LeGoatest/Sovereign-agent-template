@@ -21,6 +21,17 @@ This file is law, not a tutorial.
 
 ## Forbidden patterns
 
+- Inventing architecture without an accepted decision record.
+- Treating a skill or spec as higher authority than canon.
+- Merging unrelated architecture and implementation work in one undocumented change.
+- Skipping refusal behavior when a request conflicts with canon.
+
+## Allowed change surface
+
+- `Jules/specs/**` for planning and execution workspaces.
+- `Jules/skills/**` for procedural skill definitions.
+- `docs/**` only when explicitly updating governance/canon.
+- Top-level bootstrap and onboarding docs (`README.md`, `NEW_PROJECT.md`, `BOOTSTRAP.md`).
 - <fill in project-specific forbidden patterns here>
 
 ## Allowed change surface

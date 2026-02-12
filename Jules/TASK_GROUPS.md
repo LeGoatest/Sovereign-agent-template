@@ -10,6 +10,8 @@ Task groups classify requests before skills are selected.
 - docs
   - Skills allowed: YES (procedural only)
 
+- persistence
+  - Skills allowed: YES
 ## How Task Groups Are Used
 1. Classify into exactly one task group.
 2. If skills are allowed, consult \`Jules/SKILLS_INDEX.md\`.
