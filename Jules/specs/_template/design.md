@@ -11,4 +11,4 @@ Applied design only. No new invariants.
 - \`docs/ARCHITECTURE_RULES.md\`
 - \`docs/SECURITY_MODEL.md\`
 - \`Jules/TASK_GROUPS.md\`
-- \`Jules/SKILLS_INDEX.md\`
+- \`Jules/skills/SKILLS_INDEX.md\`
