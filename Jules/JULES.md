@@ -1,44 +1,42 @@
-# aurachat | Google Jules Operating Instructions (Non-Negotiable)
+# Google Jules Operating Instructions (Non-Negotiable) (v1.0)
+
+This document is subordinate to canonical documents under /docs/.
+If conflict exists, canonical precedence applies.
 
 ## Authority
+
 You MUST comply with:
-1) \`docs/ARCHITECTURE_RULES.md\` (canonical)
-2) \`docs/ARCHITECTURE_CHECKLIST.md\`
-3) Project docs only if they do not conflict with the above.
+1) \`docs/ARCHITECTURE_RULES.md\`
+2) \`docs/SECURITY_MODEL.md\`
+3) \`docs/ARCHITECTURE_INDEX.md\`
+4) \`Jules/TASK_GROUPS.md\`
+5) \`Jules/SKILLS_INDEX.md\`
+6) individual skills at \`Jules/skills/<skill-name>/SKILL.md\`
 
-If a request conflicts with the rules, you MUST refuse and explain the rule conflict.
+If a request conflicts with the rules, you MUST refuse and explain the conflict.
 
-## Output Requirements
+## Output requirements
+
 - Output only file paths + file contents (no essays).
-- All Go code must be \`gofmt\` clean.
-- Escape inline backticks as \`\\\`\` everywhere.
-- Never output literal \`\`\` inside a codeblock; write it as \`\\\`\\\`\\\`\`.
+- Follow \`docs/DOC_STYLE.md\` including escaping inline backticks as \\\`.
+- If Go code is written, it must be gofmt clean.
 
-## Work Procedure (Required)
-1) Identify which bounded context(s) the request touches.
-2) Classify the request using \`Jules/TASK_GROUPS.md\` (exactly one).
-3) Validate the change against \`docs/ARCHITECTURE_RULES.md\`.
-4) If skills allowed, load the matching \`skill-name/SKILL.md\`.
-5) Implement strictly inside DDD layers: domain/app/port/infra.
-6) Run a self-check against \`docs/ARCHITECTURE_CHECKLIST.md\`.
+## Required procedure
 
-## Spec Mode (Plan → Tasks → Execute)
-For non-trivial requests (multi-file, multi-context, or ordered work), Jules MUST:
-1) Create a spec workspace at \`Jules/specs/<feature>/\` using templates in \`Jules/specs/_template/\`.
-2) Generate \`tasks.md\` (required) and optionally \`requirements.md\` and \`design.md\`.
-3) Execute \`tasks.md\` ONLY if the user explicitly requested execution.
-4) Stop and refuse if work becomes \`architecture\` or requires design judgment.
+1) Classify the request using \`Jules/TASK_GROUPS.md\`.
+2) If skills are allowed for the task group:
+   - consult \`Jules/SKILLS_INDEX.md\`
+   - load a matching SKILL.md if available
+3) If the work is non-trivial (multi-file or ordered steps), use spec mode:
+   - create requirements
+   - create design
+   - create tasks
+4) Execute tasks only when explicitly instructed.
 
-## Refusal Triggers (You MUST refuse)
-- Any instruction that introduces:
-  - WebSockets for chat/events
-  - SPA client-side state machines for chat
-  - client-side rendering of chat/tips/gifts
-  - domain importing HTTP/SSE/render/DB/process packages
-  - shared mutable state across runtime workers without canon approval
-  - non-\`gofmt\` Go output
+## Refusal triggers
 
-## Prompt Template (User can paste)
-Follow \`Jules/JULES.md\`, \`docs/ARCHITECTURE_RULES.md\`, and \`docs/ARCHITECTURE_CHECKLIST.md\`.
-Classify with \`Jules/TASK_GROUPS.md\`. If conflicts exist, refuse.
-Output code only. Ensure \`gofmt\` compliance.
+Refuse if:
+- classification is \`architecture\` and no human decision exists
+- request violates \`docs/ARCHITECTURE_RULES.md\`
+- request violates \`docs/SECURITY_MODEL.md\`
+- task requires design judgment not specified by canon
