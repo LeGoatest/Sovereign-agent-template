@@ -1,16 +1,14 @@
-# Spec | tasks.md
+# Feature Spec | tasks.md
 
-## Constraints
-
-- Canon wins: \`docs/ARCHITECTURE_RULES.md\`
-- Classify with \`Jules/TASK_GROUPS.md\`
-- Use skills from \`Jules/SKILLS_INDEX.md\` when applicable
-- Exactly one task-group per task
+## Execution Constraints
+- Canon wins.
+- Exactly one task group per task.
+- Use skills when available.
+- STOP if task group becomes \`architecture\`.
 
 ## Tasks
-
 - [ ] T1 <title>
-      task-group: <architecture|docs|persistence|runtime|media|frontend>
-      skill: <skill-name or none>
-      outputs: <file paths>
+      task-group: <docs|runtime|persistence|media|frontend|architecture>
+      skill: <skill-name|none>
+      outputs: <paths>
       notes: <optional>

@@ -19,5 +19,8 @@ If documents conflict, the higher-precedence document wins.
 
 ## Notes
 
-- Skills and specs are execution scaffolding only.
-- Canonical architecture must not be overwritten by agent output.
+## Agent Governance
+- ../Jules/JULES.md
+- ../Jules/TASK_GROUPS.md
+- ../Jules/SKILLS_INDEX.md
+- ../Jules/specs/_template/

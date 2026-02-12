@@ -1,10 +1,11 @@
-# Spec | requirements.md
+# Feature Spec | requirements.md
 
-## Authority boundary
+## Status
+- Feature: <feature-name>
+- Date: <YYYY-MM-DD>
 
-This spec is not canon.
-Canon wins: \`docs/ARCHITECTURE_RULES.md\`.
+## Authority Boundary
+This file is non-canonical and subordinate to \`docs/ARCHITECTURE_RULES.md\`.
 
 ## Requirements (EARS)
-
-WHEN <condition> THE SYSTEM SHALL <behavior>
+WHEN <condition/event> THE SYSTEM SHALL <expected behavior>
