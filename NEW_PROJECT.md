@@ -19,6 +19,3 @@ Instructions:
 If conflicts exist, refuse.
 Follow all rules in this repository.
 Begin.
-# New Project
-
-Bootstrap notes for starting a new project.
