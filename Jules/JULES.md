@@ -1,8 +1,5 @@
 # Google Jules Operating Instructions (Non-Negotiable) (v1.0)
 
-This document is subordinate to canonical documents under /docs/.
-If conflict exists, canonical precedence applies.
-
 ## Authority
 
 You MUST comply with:

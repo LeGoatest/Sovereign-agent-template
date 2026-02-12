@@ -16,3 +16,6 @@ It must not introduce architecture or modify invariants.
 2) Escape inline backticks as \\\`.
 3) Avoid nested code fences. If triple backticks must be referenced, write \`\`\`.
 4) Update links and indexes if needed.
+# doc-style
+
+Documentation style skill instructions.

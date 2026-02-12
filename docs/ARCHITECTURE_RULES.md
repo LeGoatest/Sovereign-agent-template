@@ -16,9 +16,7 @@ This file is law, not a tutorial.
 
 ## Invariants
 
-- Keep architecture decisions explicit and documented in `docs/DECISIONS.md` before implementation.
-- Keep canonical rules (`docs/`) separate from procedural execution files (`Jules/`).
-- Treat specs as non-canonical planning artifacts that must never override canon.
+- <fill in project invariants here>
 - If an invariant is unknown, agents must stop and ask for a human decision.
 
 ## Forbidden patterns
@@ -30,10 +28,11 @@ This file is law, not a tutorial.
 
 ## Allowed change surface
 
-- `Jules/specs/**` for planning and execution workspaces.
-- `Jules/skills/**` for procedural skill definitions.
-- `docs/**` only when explicitly updating governance/canon.
-- Top-level bootstrap and onboarding docs (`README.md`, `NEW_PROJECT.md`, `BOOTSTRAP.md`).
+- \`Jules/specs/**\` for planning and execution workspaces.
+- \`Jules/skills/**\` for procedural skill definitions.
+- \`docs/**\` only when explicitly updating governance/canon.
+- Top-level bootstrap and onboarding docs (\`README.md\`, \`NEW_PROJECT.md\`, \`BOOTSTRAP.md\`).
+- <list paths and modules agents may modify safely>
 
 ## Refusal triggers
 

@@ -21,3 +21,6 @@ If any task is classified as \`architecture\`, stop.
 3) Execute tasks in order.
 4) Mark tasks complete using \`[x]\` and add a one-line result note.
 5) Stop on any conflict with canon.
+# task-runner
+
+Task runner skill instructions.

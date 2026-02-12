@@ -44,3 +44,6 @@ Do not use for:
 4) Respect project constraints:
 - use only the frameworks and patterns already chosen by canon
 - no SPA assumptions unless canon says so
+# wdbasic-frontend
+
+Web basic frontend skill instructions.

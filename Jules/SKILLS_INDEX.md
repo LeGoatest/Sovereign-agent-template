@@ -1,8 +1,5 @@
 # Skills Index (v1.0)
 
-This document is subordinate to canonical documents under /docs/.
-If conflict exists, canonical precedence applies.
-
 Skills are approved procedures. They do not define architecture.
 
 ## Discovery

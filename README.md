@@ -1,211 +1,47 @@
-# Sovereign Agent Template
+# sovereign-agent-template
 
-Version: 1.1  
-Status: Governance Framework  
-Scope: Deterministic AI Repo Governance
+A reusable governance + execution template for AI coding agents (including Google Jules).
 
----
+This repository is intentionally project-blind:
+- It provides process, constraints, and scaffolding.
+- It does not define product architecture for any specific application.
+- Project-specific architecture and stack choices are created in downstream repos via specs.
 
-# Purpose
+## What this provides
 
-The Sovereign Agent Template is a **governance-first AI execution framework**.
+- Canonical document precedence (law-first)
+- Task group classification before action
+- Skills as approved procedures (no implicit invention)
+- Spec mode: plan → tasks → execute
 
-It provides:
+## Repository layout
 
-- Deterministic agent behavior
-- Canonical precedence enforcement
-- Task-group classification
-- Skill isolation boundaries
-- Spec-first development flow
-- Explicit refusal model
+- \`docs/\` → canonical documentation (architecture, security, contracts)
+- \`Jules/\` → agent governance system (behavior, routing, skills, specs)
 
-This repository contains **process only**.
+## Document precedence (highest → lowest)
 
-It contains:
+1. \`docs/ARCHITECTURE_RULES.md\`
+2. \`docs/SECURITY_MODEL.md\`
+3. \`docs/ARCHITECTURE_INDEX.md\`
+4. \`Jules/JULES.md\`
+5. \`Jules/TASK_GROUPS.md\`
+6. \`Jules/SKILLS_INDEX.md\`
+7. \`Jules/skills/*/SKILL.md\`
+8. \`Jules/specs/**\` (non-canonical, execution workspaces)
 
-- No domain logic
-- No tech stack
-- No application code
-- No architectural assumptions
+## How to use
 
----
+1) Open this repository in your agent environment.
+2) Paste the prompt from \`NEW_PROJECT.md\`.
+3) Create a spec for your project using \`Jules/specs/_template/\`.
+4) Execute tasks only when explicitly instructed.
 
-# Authority Planes
+## Notes
 
-The system operates across four authority planes:
+- Escape inline backticks as \`\\`\` in generated markdown.
+- Never output literal triple-backticks inside a fenced code block. If you must show them, write them as \`\\`\\`\\`\`.
 
-## 1. Canonical Plane (Immutable Law)
+## License
 
-Defines non-negotiable truth.
-
-- docs/ARCHITECTURE_RULES.md
-- docs/SECURITY_MODEL.md
-- docs/ARCHITECTURE_INDEX.md
-- docs/DECISIONS.md
-- docs/TERMINOLOGY.md
-- docs/DOC_STYLE.md
-- docs/ENFORCEMENT_MATRIX.md
-
-Canon cannot be overridden by:
-
-- Skills
-- Specs
-- Tasks
-- Convenience
-
-Conflict → Refusal.
-
----
-
-## 2. Governance Plane (Execution Control)
-
-- Jules/JULES.md
-- Jules/TASK_GROUPS.md
-- Jules/SKILLS_INDEX.md
-
-Controls:
-
-- Classification
-- Skill permissions
-- Spec requirements
-- Refusal triggers
-
----
-
-## 3. Specification Plane (Intent Declaration)
-
-- Jules/specs/
-
-Defines:
-
-- requirements.md
-- design.md
-- tasks.md
-
-Specs are mutable.  
-Canon is not.
-
----
-
-## 4. Execution Plane (Procedural Output)
-
-Artifacts are produced only when:
-
-- Task group classified
-- Skill permission validated
-- Canon compliance confirmed
-- Spec approved (if required)
-
----
-
-# Canonical Precedence (Strict Order)
-
-1. ARCHITECTURE_RULES.md  
-2. SECURITY_MODEL.md  
-3. ARCHITECTURE_INDEX.md  
-4. DECISIONS.md  
-5. TERMINOLOGY.md  
-6. DOC_STYLE.md  
-7. ENFORCEMENT_MATRIX.md  
-8. JULES.md  
-9. TASK_GROUPS.md  
-10. SKILLS_INDEX.md  
-11. Individual SKILL.md files  
-12. Spec files
-
-Higher precedence always wins.
-
-There is no merge logic.  
-There is no heuristic override.
-
----
-
-# Task Group Model
-
-Every request must:
-
-1. Be classified into exactly one task group.
-2. Validate skill permissions.
-3. Confirm canon compliance.
-4. Refuse if ambiguous.
-
-Architecture task groups never allow skills.
-
----
-
-# Skill Model
-
-Skills are:
-
-- Deterministic procedures
-- Stateless helpers
-- Execution-only
-
-Skills cannot:
-
-- Modify canon
-- Introduce architecture
-- Override invariants
-- Interpret undefined design
-
-If design judgment is required → stop.
-
----
-
-# Spec-First Workflow
-
-For non-trivial work:
-
-1. requirements.md
-2. design.md
-3. tasks.md
-
-Execution only occurs after explicit instruction.
-
----
-
-# Refusal Conditions
-
-The agent must refuse when:
-
-- Architecture is undefined
-- Canon conflict exists
-- Task group ambiguous
-- Mixed task groups requested
-- Security boundary unclear
-- Spec required but missing
-- Skill would require architectural decision
-
-Refusal is intentional.
-
----
-
-# Repository Structure
-
-/  
-├── README.md  
-├── NEW_PROJECT.md  
-├── BOOTSTRAP.md  
-├── docs/  
-│   ├── ARCHITECTURE_INDEX.md  
-│   ├── ARCHITECTURE_RULES.md  
-│   ├── SECURITY_MODEL.md  
-│   ├── DECISIONS.md  
-│   ├── TERMINOLOGY.md  
-│   ├── DOC_STYLE.md  
-│   └── ENFORCEMENT_MATRIX.md  
-└── Jules/  
-    ├── JULES.md  
-    ├── TASK_GROUPS.md  
-    ├── SKILLS_INDEX.md  
-    ├── skills/  
-    └── specs/_template/
-
-Process only.  
-No application logic.
-
----
-
-# License
-
-See LICENSE
+Choose a license appropriate for your needs.

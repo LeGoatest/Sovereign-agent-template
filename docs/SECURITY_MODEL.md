@@ -5,8 +5,8 @@ Authority: subordinate only to ARCHITECTURE_RULES.md.
 ## Threat model summary
 
 Assets:
-- canonical governance documents under `docs/`
-- agent control-plane configuration under `Jules/`
+- canonical governance documents under \`docs/\`
+- agent control-plane configuration under \`Jules/\`
 - generated specs and tasks that may encode operational intent
 
 Adversaries:
@@ -23,6 +23,7 @@ Trust boundaries:
 - user intent vs canonical policy
 - procedural skills vs canonical governance
 - spec workspace output vs approved repository baseline
+- <define boundaries such as client/server/external systems>
 
 ## Security requirements
 
@@ -30,7 +31,8 @@ Authentication:
 - repository write access must be limited to approved maintainers and automation identities
 
 Authorization:
-- only authorized reviewers may approve canonical governance changes under `docs/` and `Jules/`
+- only authorized reviewers may approve canonical governance changes under \`docs/\` and \`Jules/\`
+- <rules>
 
 Secrets handling:
 - never commit secrets
@@ -43,6 +45,8 @@ Input validation:
 Audit and logging:
 - record material governance updates in commit history and review discussion
 - keep refusal rationale explicit when work is blocked by canon
+- validate inputs at boundaries
+- define what must be logged and what must not
 
 ## Refusal rules (security)
 

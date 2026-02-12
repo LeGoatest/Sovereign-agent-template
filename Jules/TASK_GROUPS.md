@@ -1,29 +1,27 @@
 # Agent Task Group Classification (v1.0)
 
-This document is subordinate to canonical documents under /docs/.
-If conflict exists, canonical precedence applies.
-
 Task groups classify requests before skills are selected.
 
 ## Task groups
 
 - architecture
   - Skills allowed: NO
-
 - docs
   - Skills allowed: YES (procedural only)
-
 - persistence
   - Skills allowed: YES
-
 - runtime
   - Skills allowed: YES
-
 - media
   - Skills allowed: YES
-
 - frontend
   - Skills allowed: YES
+
+## How task groups are used
+
+1. Classify into exactly one task group.
+2. If skills are allowed, consult \`Jules/SKILLS_INDEX.md\`.
+3. If ambiguous or mixed, STOP and ask or refuse.
 
 ## Rules
 
