@@ -13,8 +13,5 @@ Skills use the folder format:
 Agents MUST classify the request with \`Jules/TASK_GROUPS.md\` before selecting any skill.
 
 ## Available Skills
-- ent-migration/SKILL.md (task group: persistence)
-- room-sse-event/SKILL.md (task group: runtime)
-- signaling-change/SKILL.md (task group: media)
 - wdbasic-frontend/SKILL.md (task group: frontend)
 - spec-mode/SKILL.md (task group: docs)
