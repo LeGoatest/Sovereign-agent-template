@@ -25,3 +25,6 @@ If the audit requires deciding what the architecture should be, stop.
 - write \`GAP_REPORT.md\` (or \`docs/GAP_REPORT.md\` if docs exist)
 
 4) Do not implement fixes unless requested.
+# repo-audit
+
+Repository audit skill instructions.

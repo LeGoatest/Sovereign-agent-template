@@ -28,3 +28,6 @@ This repository is designed so that agents are controlled by files, not prompts.
 If an agent needs to ask “what should I do”:
 - the answer must already exist in this repository, or
 - the agent must stop and request a human decision
+# Bootstrap
+
+Initial setup and bootstrap instructions.

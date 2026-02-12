@@ -23,6 +23,16 @@ Trust boundaries:
 - user intent vs canonical policy
 - procedural skills vs canonical governance
 - spec workspace output vs approved repository baseline
+- <list key assets>
+
+Adversaries:
+- <list likely adversaries>
+
+Entry points:
+- <list entry points>
+
+Trust boundaries:
+- <define boundaries such as client/server/external systems>
 
 ## Security requirements
 
@@ -31,6 +41,10 @@ Authentication:
 
 Authorization:
 - only authorized reviewers may approve canonical governance changes under `docs/` and `Jules/`
+- <rules>
+
+Authorization:
+- <rules>
 
 Secrets handling:
 - never commit secrets
@@ -43,6 +57,10 @@ Input validation:
 Audit and logging:
 - record material governance updates in commit history and review discussion
 - keep refusal rationale explicit when work is blocked by canon
+- validate inputs at boundaries
+
+Audit and logging:
+- define what must be logged and what must not
 
 ## Refusal rules (security)
 

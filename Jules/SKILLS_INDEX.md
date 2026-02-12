@@ -21,3 +21,6 @@ Skills live at:
 - doc-style (task group: docs)
 - task-runner (task group: docs)
 - wdbasic-frontend (task group: frontend, optional)
+# Skills Index
+
+Index of available Jules skills.
