@@ -1,21 +1,15 @@
-# aurachat | Agent Task Group Classification (v1.1)
+# Agent Task Group Classification (v1.0)
 
-This document defines **task groups** used by agents to classify user requests **before** selecting skills or executing work.
+This document defines task groups used to classify requests before skill selection and execution.
 
-Task groups are **routing metadata**, not procedures and not authority.
+Task groups are routing metadata only. They do not override `Jules/JULES.md`.
 
-They exist to answer one question:
-“What *kind* of work is this?”
+## Classification Rules
+1. Classify every request into **exactly one** task group.
+2. If classification is ambiguous or mixed, stop and request clarification or refuse.
+3. Only after classification, apply skill and spec decisions per `Jules/JULES.md`.
 
-## Authority & Precedence
-Task groups are subordinate to canonical documents.
-
-## How Task Groups Are Used
-1. Classify into exactly one task group.
-2. If skills are allowed, consult \`Jules/skills/SKILLS_INDEX.md\`.
-3. If ambiguous or mixed, STOP and ask or refuse.
-
-## Defined Task Groups
+## Task Groups
 
 ### architecture
 Skills allowed: NO
@@ -34,5 +28,3 @@ Skills allowed: YES
 
 ### docs
 Skills allowed: YES (procedural-only)
-Likely skills:
-- spec-mode/SKILL.md
