@@ -1,10 +1,19 @@
-# ENFORCEMENT_MATRIX.md
+# Enforcement Matrix (v1.0)
 
-Maps rules to enforcement points.
+Defines which rules are enforced by what mechanism.
 
-| Rule | Enforcement Point | Failure Mode | Action |
-|---|---|---|---|
-| Domain purity | CI lint / code review | Domain imports IO | Refuse change |
-| Task group first | Agent behavior | Skill used pre-classification | Refuse |
-| Formatter law | CI | Unformatted output | Reject |
-| Spec Mode for non-trivial | Agent behavior | Skipped planning | Require spec |
+- ARCHITECTURE_RULES.md
+  - Enforced by: human review + agent refusal
+  - Mechanism: refusal triggers in Jules instructions
+
+- SECURITY_MODEL.md
+  - Enforced by: agent refusal + human review
+  - Mechanism: security refusal triggers
+
+- TASK_GROUPS.md
+  - Enforced by: agent procedure
+  - Mechanism: classification required before skill activation
+
+- SKILLS_INDEX.md
+  - Enforced by: agent procedure
+  - Mechanism: skills must be registered

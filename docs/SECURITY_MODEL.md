@@ -1,23 +1,42 @@
-# SECURITY_MODEL.md
+# Security Model (v1.0)
 
-Defines the security and trust boundaries for the system.
+Authority: subordinate only to ARCHITECTURE_RULES.md.
 
-## Principles
-- Least privilege by default
-- Explicit trust boundaries per interface
-- No secrets in documentation or specs
-- Secure-by-default configuration
+## Threat model summary
 
-## Required Controls
-- Authentication: documented mechanism and threat model
-- Authorization: role and policy checks documented
-- Input validation: request-level validation in port layer
-- Output encoding: prevent injection in rendered fragments
-- Rate limits: defined for public endpoints
-- Auditing: key actions must be logged
+Assets:
+- <list key assets>
 
-## Agent Safety
-Agents MUST NOT:
-- introduce new auth flows without explicit canonical change
-- store secrets in repo files
-- weaken existing refusal rules
+Adversaries:
+- <list likely adversaries>
+
+Entry points:
+- <list entry points>
+
+Trust boundaries:
+- <define boundaries such as client/server/external systems>
+
+## Security requirements
+
+Authentication:
+- <rules>
+
+Authorization:
+- <rules>
+
+Secrets handling:
+- never commit secrets
+- load secrets via environment variables or secret manager
+
+Input validation:
+- validate inputs at boundaries
+
+Audit and logging:
+- define what must be logged and what must not
+
+## Refusal rules (security)
+
+Agents MUST refuse to:
+- add secrets to the repository
+- weaken authentication or authorization requirements
+- bypass security checks required by canon

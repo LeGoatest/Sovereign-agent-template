@@ -1,10 +1,17 @@
-# DECISIONS.md
+# Decisions (ADR-lite) (v1.0)
 
-Record architectural decisions (ADR-lite).
+Record project decisions here.
 
-## Format
-- Date:
-- Decision:
+## Template
+
+### D-0001: <decision title>
+- Date: <YYYY-MM-DD>
+- Status: Proposed | Accepted | Rejected | Superseded
 - Context:
-- Alternatives:
+  - <what prompted this>
+- Decision:
+  - <what was decided>
 - Consequences:
+  - <tradeoffs and impacts>
+- References:
+  - <links to relevant docs>

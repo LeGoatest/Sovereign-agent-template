@@ -1,9 +1,15 @@
-# TERMINOLOGY.md
+# Terminology (v1.0)
 
-Defines shared vocabulary.
+Define terms to reduce ambiguity.
 
-- **Canon**: Highest-precedence documentation set that defines truth.
-- **Task Group**: Intent classification label used before selecting a skill.
-- **Skill**: Procedural playbook for repeatable tasks.
-- **Spec Mode**: Plan → tasks.md → execute workflow for non-trivial work.
-- **Spec Workspace**: \`Jules/specs/<feature>/\` folder containing requirements/design/tasks.
+## Terms
+
+- Canon: highest-precedence documents that define truth.
+- Task group: intent classification performed before selecting skills.
+- Skill: approved procedure that operates within canonical constraints.
+- Spec mode: plan → tasks → execute workflow using spec templates.
+
+## Rules
+
+- Use these terms consistently in docs and outputs.
+- If a new term is required, add it here and reference it.
