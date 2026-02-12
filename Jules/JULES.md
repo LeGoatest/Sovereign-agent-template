@@ -24,7 +24,7 @@ If a request conflicts with the rules, you MUST refuse and explain the rule conf
 
 ## Spec Mode (Plan → Tasks → Execute)
 For non-trivial requests (multi-file, multi-context, or ordered work), Jules MUST:
-1) Create a spec workspace at \`Jules/specs/<feature>/\` using templates in \`Jules/specs/_template/\`.
+1) Create a spec workspace at \`Jules/spec/<feature>/\` using templates in \`Jules/spec/_templates/\`.
 2) Generate \`tasks.md\` (required) and optionally \`requirements.md\` and \`design.md\`.
 3) Execute \`tasks.md\` ONLY if the user explicitly requested execution.
 4) Stop and refuse if work becomes \`architecture\` or requires design judgment.

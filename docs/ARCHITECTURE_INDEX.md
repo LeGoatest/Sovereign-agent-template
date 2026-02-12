@@ -10,7 +10,7 @@ This is the authoritative entry point for canonical documents.
 5. TASK_GROUPS.md
 6. SKILLS_INDEX.md
 7. Individual SKILL.md files
-8. Specs in Jules/specs/ (non-canonical)
+8. Specs in Jules/spec/ (non-canonical)
 
 If documents conflict, the higher-precedence document wins.
 
@@ -28,5 +28,5 @@ If documents conflict, the higher-precedence document wins.
 ## Agent Governance
 - ../Jules/JULES.md
 - ../Jules/TASK_GROUPS.md
-- ../Jules/skills/SKILLS_INDEX.md
-- ../Jules/specs/_template/
+- ../Jules/SKILLS_INDEX.md
+- ../Jules/spec/_templates/

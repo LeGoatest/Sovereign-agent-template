@@ -25,9 +25,9 @@ This template provides:
 3. docs/SECURITY_MODEL.md
 4. Jules/JULES.md
 5. Jules/TASK_GROUPS.md
-6. Jules/skills/SKILLS_INDEX.md
+6. Jules/SKILLS_INDEX.md
 7. Jules/skills/*/SKILL.md
-8. Jules/specs/** (non-canonical, execution workspaces)
+8. Jules/spec/** (non-canonical, execution workspaces)
 
 ## Quick Start
 
@@ -35,7 +35,7 @@ This template provides:
 2. Customize \`docs/\` for your product.
 3. Keep Jules governance in \`Jules/\` (do not duplicate rules elsewhere).
 4. For non-trivial work, use Spec Mode:
-   - create \`Jules/specs/<feature>/tasks.md\`
+   - create \`Jules/spec/<feature>/tasks.md\`
    - execute tasks in order, using skills when applicable
 
 ## Notes

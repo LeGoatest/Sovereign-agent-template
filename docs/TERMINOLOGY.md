@@ -6,4 +6,4 @@ Defines shared vocabulary.
 - **Task Group**: Intent classification label used before selecting a skill.
 - **Skill**: Procedural playbook for repeatable tasks.
 - **Spec Mode**: Plan → tasks.md → execute workflow for non-trivial work.
-- **Spec Workspace**: \`Jules/specs/<feature>/\` folder containing requirements/design/tasks.
+- **Spec Workspace**: \`Jules/spec/<feature>/\` folder containing requirements/design/tasks.
