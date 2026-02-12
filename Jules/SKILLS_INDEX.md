@@ -1,23 +1,26 @@
-# Skills Index (v1.0)
+# Project Name | Skills Index (Canonical)
 
-Skills are approved procedures. They do not define architecture.
+This document lists the **procedural skills** the Agent is authorized to use.
+No other procedures or methodologies are permitted.
 
-## Discovery
+---
 
-Skills live at:
-- \`Jules/skills/<skill-name>/SKILL.md\`
+## 1) Governance Skills
+- **audit-governance**: Audit and update canonical documents.
+- **bootstrap-project**: Initialize governance in an existing repository.
 
-## Activation rules
+## 2) Planning Skills
+- **spec-mode**: Protocol for requirements, design, and task creation.
 
-- Classify task group first using \`Jules/TASK_GROUPS.md\`.
-- Only activate skills if the task group allows them.
-- If a skill conflicts with canon, ignore it and refuse the request.
-- If a skill requires design judgment, stop.
+## 3) Operational Skills
+- **cicd-ops**: Manage CI/CD pipelines and infrastructure artifacts.
+- **doc-maintainer**: Maintenance of non-canonical documentation.
 
-## Available skills
+## 4) Implementation & Verification Skills
+- **test-enforcer**: Enforcement of testing and validation rules.
+- **wdbasic-frontend**: Specific procedure for building frontend components.
 
-- spec-mode (task group: docs)
-- repo-audit (task group: docs)
-- doc-style (task group: docs)
-- task-runner (task group: docs)
-- wdbasic-frontend (task group: frontend, optional)
+---
+
+## Constraint
+The Agent MUST NOT invent or combine procedures outside of these defined skills.

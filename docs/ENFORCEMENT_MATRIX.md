@@ -1,19 +1,19 @@
-# Enforcement Matrix (v1.0)
+# Project Name | Enforcement Matrix
 
-Defines which rules are enforced by what mechanism.
+## 1) Governance Enforcement
 
-- ARCHITECTURE_RULES.md
-  - Enforced by: human review + agent refusal
-  - Mechanism: refusal triggers in Jules instructions
+| Scope | Authority | Enforcement Mechanism |
+|-------|-----------|-----------------------|
+| Architecture | ARCHITECTURE_RULES.md | Refusal if violated |
+| Security | SECURITY_MODEL.md | Refusal if violated |
+| Process | JULES.md | Refusal if violated |
+| Skills | Jules/skills/ | Refusal if invent new |
+| Change | PR Review | Manual approval |
 
-- SECURITY_MODEL.md
-  - Enforced by: agent refusal + human review
-  - Mechanism: security refusal triggers
+## 2) Task Enforcement
 
-- TASK_GROUPS.md
-  - Enforced by: agent procedure
-  - Mechanism: classification required before skill activation
-
-- SKILLS_INDEX.md
-  - Enforced by: agent procedure
-  - Mechanism: skills must be registered
+| Task Type | Plane | Requirement |
+|-----------|-------|-------------|
+| Spec creation | Control | Requirements + Design + Tasks |
+| Implementation | Data | Must reference accepted task |
+| Docs | Control | Must reference rule or decision |

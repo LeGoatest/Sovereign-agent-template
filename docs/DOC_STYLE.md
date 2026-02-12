@@ -1,19 +1,16 @@
-# Documentation Style (v1.0)
+# Project Name | Documentation Style Guide
 
-## Output constraints
-
-- Prefer short, direct sentences.
+## 1) Markdown Standards
+- Use clear, descriptive headings.
+- Prefer lists for procedures and requirements.
 - Use consistent headings and terminology from TERMINOLOGY.md.
+
+## 2) Backtick Handling (Critical for Agents)
+- Escape inline backticks as `\\` in generated markdown if they are part of a literal string.
+- Never output literal triple-backticks inside a fenced code block.
+- If you must show markdown code blocks inside markdown, use tilde fences (~~~md) or quadrupled backticks if supported.
+
+## 3) Tone & Clarity
+- Be direct and deterministic.
+- Avoid flowery language or ambiguity.
 - Avoid inventing behavior. Cite existing canon in the repo.
-
-## Formatting rule: inline backticks
-
-When writing markdown that contains inline code, escape inline backticks as \`.
-
-Example:
-- Write \`someIdentifier\` rather than unescaped inline backticks.
-
-## Formatting rule: do not nest code fences
-
-Do not place triple backticks inside a fenced code block.
-If you must refer to triple backticks literally, write them as \`\`\`.

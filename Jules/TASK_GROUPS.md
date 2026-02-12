@@ -1,31 +1,35 @@
-# Agent Task Group Classification (v1.0)
+# Project Name | Task Group Classification (Canonical)
 
-Task groups classify requests before skills are selected.
+Every request must be classified into one of these task groups before any work begins.
 
-## Task groups
+---
 
-- architecture
-  - Skills allowed: NO
-- docs
-  - Skills allowed: YES (procedural only)
-- persistence
-  - Skills allowed: YES
-- runtime
-  - Skills allowed: YES
-- media
-  - Skills allowed: YES
-- frontend
-  - Skills allowed: YES
+## 1) Architecture (Canonical)
+- **Scope**: Modifying `docs/**`, `Jules/JULES.md`, `Jules/TASK_GROUPS.md`.
+- **Constraint**: Human decision required. Agent acts only as an auditor.
+- **Allowed Skills**: `audit-governance`, `bootstrap-project`.
 
-## How task groups are used
+## 2) Planning (Control Plane)
+- **Scope**: Modifying `.jtasks/**`.
+- **Constraint**: Must follow `spec-mode` protocol.
+- **Allowed Skills**: `spec-mode`.
 
-1. Classify into exactly one task group.
-2. If skills are allowed, consult \`Jules/SKILLS_INDEX.md\`.
-3. If ambiguous or mixed, STOP and ask or refuse.
+## 3) Implementation (Data Plane)
+- **Scope**: Modifying application logic, business rules, or platform code.
+- **Constraint**: Must reference an approved task in `.jtasks/`.
+- **Allowed Skills**: Any specialized implementation skills.
 
-## Rules
+## 4) Infrastructure & Operations (Ops)
+- **Scope**: CI/CD pipelines, Dockerfiles, Makefiles.
+- **Constraint**: Must verify against `SECURITY_MODEL.md`.
+- **Allowed Skills**: `cicd-ops`.
 
-- Classify into exactly one task group.
-- If ambiguous, stop and ask for clarification.
-- Do not downgrade \`architecture\` into a procedural group.
-- Do not execute multiple task groups in one response.
+## 5) Verification (Assurance)
+- **Scope**: Tests, benchmarks, audits.
+- **Constraint**: Must verify invariants.
+- **Allowed Skills**: `test-enforcer`.
+
+---
+
+## Refusal Condition
+If a request cannot be clearly classified into one of these groups, the Agent MUST refuse to act.

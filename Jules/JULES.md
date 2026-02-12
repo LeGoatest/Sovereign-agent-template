@@ -1,39 +1,80 @@
-# Google Jules Operating Instructions (Non-Negotiable) (v1.0)
+# Project Name | Agent Operating Instructions (Non-Negotiable)
 
-## Authority
+This document defines **mandatory operating rules** for the Agent when working on this codebase.
+This is a **binding contract**, not guidance.
 
-You MUST comply with:
-1) \`docs/ARCHITECTURE_RULES.md\`
-2) \`docs/SECURITY_MODEL.md\`
-3) \`docs/ARCHITECTURE_INDEX.md\`
-4) \`Jules/TASK_GROUPS.md\`
-5) \`Jules/SKILLS_INDEX.md\`
-6) individual skills at \`Jules/skills/<skill-name>/SKILL.md\`
+---
 
-If a request conflicts with the rules, you MUST refuse and explain the conflict.
+## 1) Authority & Precedence (Absolute)
 
-## Output requirements
+You MUST comply with the documents in the order defined in `docs/ARCHITECTURE_INDEX.md`.
 
-- Output only file paths + file contents (no essays).
-- Follow \`docs/DOC_STYLE.md\` including escaping inline backticks as \\\`.
+If a request conflicts with **any higher-precedence document**, you MUST:
+- refuse the request
+- cite the conflicting rule
+- explain the conflict clearly
+- produce **no code**
+
+Silently “fixing” or bypassing rules is forbidden.
+
+---
+
+## 2) Scope of Authority
+
+The Agent is allowed to:
+- generate implementation code
+- refactor existing code to comply with rules
+- add missing glue code required by existing contracts
+- refuse invalid or unsafe requests
+
+The Agent is NOT allowed to:
+- reinterpret architecture
+- invent new patterns
+- relax constraints
+- “improve” design decisions
+- introduce undocumented behavior
+
+---
+
+## 3) Output Requirements (Strict)
+
+When generating output:
+- **Output code/docs only**
+- Include file paths at the top of each file
+- Do NOT include explanations, essays, or commentary unless explicitly requested
+- Respect project-defined formatting standards
+- Follow `docs/DOC_STYLE.md` including escaping inline backticks as \\`.
 - If Go code is written, it must be gofmt clean.
 
-## Required procedure
+---
 
-1) Classify the request using \`Jules/TASK_GROUPS.md\`.
-2) If skills are allowed for the task group:
-   - consult \`Jules/SKILLS_INDEX.md\`
-   - load a matching SKILL.md if available
-3) If the work is non-trivial (multi-file or ordered steps), use spec mode:
-   - create requirements
-   - create design
-   - create tasks
-4) Execute tasks only when explicitly instructed.
+## 4) Required Work Procedure (Non-Optional)
 
-## Refusal triggers
+For every request, the Agent MUST:
+1) Classify the request using `Jules/TASK_GROUPS.md`.
+2) Identify the affected system components.
+3) Validate the request against `docs/ARCHITECTURE_RULES.md` and `docs/SECURITY_MODEL.md`.
+4) Enforce strict architectural boundaries.
+5) If a procedural skill exists in `Jules/skills/`, it MUST be followed (refer to `Jules/SKILLS_INDEX.md`).
+6) If the work is non-trivial (multi-file or ordered steps), use spec mode (`.jtasks/`).
 
-Refuse if:
-- classification is \`architecture\` and no human decision exists
-- request violates \`docs/ARCHITECTURE_RULES.md\`
-- request violates \`docs/SECURITY_MODEL.md\`
-- task requires design judgment not specified by canon
+---
+
+## 5) Mandatory Refusal Triggers
+
+The Agent MUST refuse any request that introduces or implies:
+- Violation of `ARCHITECTURE_RULES.md`
+- Violation of `SECURITY_MODEL.md`
+- Undocumented architectural changes
+- Ambiguous intent
+- Task requires design judgment not specified by canon
+
+Refusal is **success**, not failure.
+
+---
+
+## 6) Skill Usage Rule
+
+If a request matches a procedural task listed in `Jules/SKILLS_INDEX.md`, the Agent MUST load and follow the corresponding `SKILL.md`.
+If a skill conflicts with higher-precedence documents, the skill is ignored and the request MUST be refused.
+The Agent MUST NOT invent or combine procedures outside of these defined skills.

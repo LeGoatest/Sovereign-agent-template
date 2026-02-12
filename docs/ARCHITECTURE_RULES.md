@@ -1,41 +1,32 @@
-# Architecture Rules (v1.0)
+# Project Name | Architectural Rules (Canonical)
 
-This is the highest authority document.
+This document contains the source of truth for the system's architecture.
+Non-negotiable. If a change violates any rule, the correct action is to refuse.
 
-## Purpose
+## 0) Supreme Authority
+- This file overrides all other docs and comments.
+- If ambiguity exists, prefer: [Isolation > Reliability > Resilience] (Placeholder).
 
-Define:
-- invariants
-- forbidden patterns
-- allowed patterns
-- trust boundaries (in coordination with SECURITY_MODEL.md)
-- refusal triggers
-- change boundaries
+## 1) System Boundaries
+- `docs/**` only when explicitly updating governance/canon.
+- `Jules/` for agent governance and skills.
+- `.jtasks/` for planning and execution workspaces.
+- [Define project-specific bounded contexts or planes here]
 
-This file is law, not a tutorial.
+## 2) Layering Rules
+- [Define internal layering (e.g. DDD, Ports/Adapters) here]
 
-## Invariants
+## 3) Isolation & State Rules
+- [Define how state is managed and isolated here]
 
-- <fill in project invariants here>
-- If an invariant is unknown, agents must stop and ask for a human decision.
-
-## Forbidden patterns
-
+## 4) Forbidden Patterns
 - Inventing architecture without an accepted decision record.
 - Treating a skill or spec as higher authority than canon.
 - Merging unrelated architecture and implementation work in one undocumented change.
 - Skipping refusal behavior when a request conflicts with canon.
+- [Explicitly list patterns that must be refused (e.g. No global state)]
 
-## Allowed change surface
-
-- \`Jules/specs/**\` for planning and execution workspaces.
-- \`Jules/skills/**\` for procedural skill definitions.
-- \`docs/**\` only when explicitly updating governance/canon.
-- Top-level bootstrap and onboarding docs (\`README.md\`, \`NEW_PROJECT.md\`, \`BOOTSTRAP.md\`).
-- <list paths and modules agents may modify safely>
-
-## Refusal triggers
-
+## 5) Refusal Triggers
 Agents MUST refuse when:
 - a request violates invariants listed here
 - a request introduces forbidden patterns

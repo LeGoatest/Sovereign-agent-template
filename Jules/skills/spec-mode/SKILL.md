@@ -1,30 +1,58 @@
 ---
 name: spec-mode
-description: Create a spec workspace (requirements, design, tasks) and optionally execute tasks.md step-by-step for non-trivial work.
+description: Create a feature spec workspace in .jtasks and execute tasks step-by-step.
+metadata:
+  category: docs
+  authority: procedural
+  requires:
+    - ARCHITECTURE_RULES.md
+    - JULES.md
+    - TASK_GROUPS.md
+    - SKILLS_INDEX.md
 ---
 
-# Skill: spec-mode
+# Skill: Spec Mode (Plan → Tasks → Execute)
 
-## Authority boundary
+## Purpose
+Provide a deterministic workflow to:
+1) create a feature spec workspace under `.jtasks/`
+2) generate a checkbox `tasks.md` plan
+3) execute it step-by-step
 
-This skill is procedural only.
-It must not introduce architecture or modify invariants.
-If design judgment is required, stop.
+## Workspace Layout
+Create:
+- `.jtasks/YY:MM:DD:HH:MM:SS/`
+  - GAP_REPORT.md
+  - requirements.md
+  - design.md
+  - tasks.md
 
-## Procedure
+Use templates from `.jtasks/_template/`.
 
-1) Create a spec workspace:
-- \`Jules/specs/<feature>/requirements.md\`
-- \`Jules/specs/<feature>/design.md\`
-- \`Jules/specs/<feature>/tasks.md\`
+## Procedure Checklist
 
-2) Use templates from:
-- \`Jules/specs/_template/\`
+### A) Classification Gate
+1. Classify the request using `TASK_GROUPS.md`.
+2. If classification is `architecture`, STOP.
 
-3) Author tasks:
-Each task must include:
-- task-group (exactly one)
-- skill (or none)
-- outputs (file paths)
+### B) Generate Spec Files
+1. Create the timestamped folder.
+2. Fill `GAP_REPORT.md` identifying the current state vs. desired state.
+3. Fill `requirements.md` (EARS form).
+4. Fill `design.md` referencing canonical docs.
+5. Generate `tasks.md` with checkbox tasks.
 
-4) Execute tasks only if explicitly instructed.
+### C) Task Authoring Rules
+For each task in `tasks.md`:
+- must declare exactly one task-group
+- must declare a skill if one exists
+- must list expected outputs
+
+### D) Execution Mode
+1. For each unchecked task in order:
+   - validate task-group
+   - implement changes
+   - mark task [x] with a one-line result note
+
+## Authority Boundary
+This skill provides workflow structure only. It does NOT introduce architecture or redefine invariants.
