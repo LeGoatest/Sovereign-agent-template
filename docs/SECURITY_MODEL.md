@@ -9,15 +9,16 @@ Defines the security and trust boundaries for the system.
 - Secure-by-default configuration
 
 ## Required Controls
-- Authentication: documented mechanism and threat model
-- Authorization: role and policy checks documented
-- Input validation: request-level validation in port layer
-- Output encoding: prevent injection in rendered fragments
-- Rate limits: defined for public endpoints
-- Auditing: key actions must be logged
+- Authentication: <fill in mechanism and threat model>
+- Authorization: <fill in role/policy checks>
+- Input validation: request-level validation in port/interface layer
+- Output encoding: injection-safe rendering/serialization
+- Rate limits: <fill in public/edge limits>
+- Auditing: <fill in key actions that must be logged>
 
 ## Agent Safety
 Agents MUST NOT:
 - introduce new auth flows without explicit canonical change
-- store secrets in repo files
+- store secrets in repository files
 - weaken existing refusal rules
+- bypass authority boundaries defined by canonical precedence

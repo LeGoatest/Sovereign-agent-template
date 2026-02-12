@@ -10,5 +10,5 @@ Documentation formatting rules.
 - Mermaid diagrams must use a GitHub-safe subset.
 
 ## Forbidden
-- Unescaped inline backticks that can break downstream rendering
-- Nested code fences
+- Unescaped inline backticks that can break downstream rendering.
+- Nested code fences.
