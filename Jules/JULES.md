@@ -1,6 +1,7 @@
 # Project Name | Agent Operating Instructions (Non-Negotiable)
 
 This document defines **mandatory operating rules** for the Agent when working on this codebase.
+
 This is a **binding contract**, not guidance.
 
 ---
@@ -43,7 +44,7 @@ When generating output:
 - Include file paths at the top of each file
 - Do NOT include explanations, essays, or commentary unless explicitly requested
 - Respect project-defined formatting standards
-- Follow `docs/DOC_STYLE.md` including escaping inline backticks as \\`.
+- Follow `docs/DOC_STYLE.md` including escaping inline backticks as \`.
 - If Go code is written, it must be gofmt clean.
 
 ---
@@ -52,11 +53,11 @@ When generating output:
 
 For every request, the Agent MUST:
 1) Classify the request using `Jules/TASK_GROUPS.md`.
-2) Identify the affected system components.
-3) Validate the request against `docs/ARCHITECTURE_RULES.md` and `docs/SECURITY_MODEL.md`.
-4) Enforce strict architectural boundaries.
-5) If a procedural skill exists in `Jules/skills/`, it MUST be followed (refer to `Jules/SKILLS_INDEX.md`).
-6) If the work is non-trivial (multi-file or ordered steps), use spec mode (`.jtasks/`).
+2) Break complex tasks into 5 simple steps/prompts that feed into each other to ensure deterministic execution.
+3) Identify the affected system components.
+4) Validate the request against `docs/ARCHITECTURE_RULES.md` and `docs/SECURITY_MODEL.md`.
+5) Enforce strict architectural boundaries.
+6) If a procedural skill exists in `Jules/skills/`, it MUST be followed.
 
 ---
 
@@ -67,7 +68,6 @@ The Agent MUST refuse any request that introduces or implies:
 - Violation of `SECURITY_MODEL.md`
 - Undocumented architectural changes
 - Ambiguous intent
-- Task requires design judgment not specified by canon
 
 Refusal is **success**, not failure.
 
@@ -77,4 +77,3 @@ Refusal is **success**, not failure.
 
 If a request matches a procedural task listed in `Jules/SKILLS_INDEX.md`, the Agent MUST load and follow the corresponding `SKILL.md`.
 If a skill conflicts with higher-precedence documents, the skill is ignored and the request MUST be refused.
-The Agent MUST NOT invent or combine procedures outside of these defined skills.

@@ -3,7 +3,6 @@
 ## 1) Markdown Standards
 - Use clear, descriptive headings.
 - Prefer lists for procedures and requirements.
-- Use consistent headings and terminology from TERMINOLOGY.md.
 
 ## 2) Backtick Handling (Critical for Agents)
 - Escape inline backticks as `\\` in generated markdown if they are part of a literal string.
@@ -13,4 +12,3 @@
 ## 3) Tone & Clarity
 - Be direct and deterministic.
 - Avoid flowery language or ambiguity.
-- Avoid inventing behavior. Cite existing canon in the repo.

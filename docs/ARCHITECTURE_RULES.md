@@ -20,14 +20,4 @@ Non-negotiable. If a change violates any rule, the correct action is to refuse.
 - [Define how state is managed and isolated here]
 
 ## 4) Forbidden Patterns
-- Inventing architecture without an accepted decision record.
-- Treating a skill or spec as higher authority than canon.
-- Merging unrelated architecture and implementation work in one undocumented change.
-- Skipping refusal behavior when a request conflicts with canon.
 - [Explicitly list patterns that must be refused (e.g. No global state)]
-
-## 5) Refusal Triggers
-Agents MUST refuse when:
-- a request violates invariants listed here
-- a request introduces forbidden patterns
-- a request requires architecture decisions not specified
