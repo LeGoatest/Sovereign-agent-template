@@ -1,10 +1,56 @@
-# Sovereign Agent Template (SAGT)
+<a id="readme-top"></a>
 
-A formalized **contract-governed multi-plane execution constitution** for AI coding agents.
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h3 align="center">Sovereign Agent Template (SAGT)</h3>
+
+  <p align="center">
+    A formalized contract-governed multi-plane execution constitution for AI coding agents.
+    <br />
+    <a href="docs/ARCHITECTURE_INDEX.md"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="BOOTSTRAP.md">Bootstrap Project</a>
+    &middot;
+    <a href="NEW_PROJECT.md">New Project Guide</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#core-philosophy-sovereign-systems-axioms">Core Philosophy</a></li>
+        <li><a href="#advanced-governance-layer">Advanced Governance Layer</a></li>
+      </ul>
+    </li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#repository-structure">Repository Structure</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
 SAGT is an **operating doctrine** that provides a deterministic, repository-controlled governance framework. It establishes a clear separation between architectural authority and procedural execution.
 
-## 1. Core Philosophy: Sovereign Systems Axioms
+### Core Philosophy: Sovereign Systems Axioms
 
 The framework is built on six constitutional axioms defined in `docs/SYSTEM_AXIOMS.md`:
 
@@ -15,7 +61,7 @@ The framework is built on six constitutional axioms defined in `docs/SYSTEM_AXIO
 5.  **Sovereign Boundaries**: Each component owns its authority domain.
 6.  **Contractual Communication**: Cross-boundary communication occurs only through explicit contracts.
 
-## 2. Advanced Governance Layer
+### Advanced Governance Layer
 
 Beyond basic mechanics, SAGT enforces sophisticated organizational invariants:
 - **CONTRACT_MODEL.md**: Defines explicit interfaces for cross-plane communication.
@@ -23,18 +69,87 @@ Beyond basic mechanics, SAGT enforces sophisticated organizational invariants:
 - **MUTATION_PROCESS.md**: Establishes a formal process for constitutional/canon amendments.
 - **VERSION_LOCKING.md**: Ensures stability and anchors execution to specific canon states.
 
-## 3. Governance Hierarchy
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-All work must comply with the hierarchy defined in `docs/ARCHITECTURE_INDEX.md`. Higher precedence documents always overrule lower ones.
+<!-- GETTING STARTED -->
+## Getting Started
+
+To implement SAGT in your project:
+
+1. Refer to [BOOTSTRAP.md](BOOTSTRAP.md) to initialize governance in an existing repository.
+2. Follow [NEW_PROJECT.md](NEW_PROJECT.md) if starting from scratch.
+3. Ensure your agent is configured to follow the instructions in `Jules/JULES.md`.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+SAGT defines a strict **Governance Hierarchy**. All work must comply with the hierarchy defined in `docs/ARCHITECTURE_INDEX.md`.
 
 1.  **ARCHITECTURE_RULES.md**: The supreme law of the project.
 2.  **SYSTEM_AXIOMS.md**: The philosophical invariants.
 3.  **SECURITY_MODEL.md**: The trust and safety boundary.
 
-## 4. Repository Structure
+The Agent MUST refuse any request that violates the canon or implies undocumented architectural drift. **Refusal is a sign of system integrity.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- REPOSITORY STRUCTURE -->
+## Repository Structure
+
 - `docs/` -> Canonical architecture and governance law.
 - `Jules/` -> Agent operating instructions and procedural skills (compliant with `agentskills.io`).
 - `.jtasks/` -> Deterministic planning and execution records.
 
-## 5. Refusal Model
-The Agent MUST refuse any request that violates the canon or implies undocumented architectural drift. **Refusal is a sign of system integrity.**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [x] SAGT v2.0 Specification
+- [x] Deterministic Planning Protocol (.jtasks)
+- [ ] Multi-Agent Coordination Protocol
+- [ ] Automated Governance Auditing
+- [ ] External Contract Verification
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are welcome! Please follow the rules defined in `CONTRIBUTING.md`.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/your_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/your_username/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/your_username/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/your_username/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/your_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/your_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/your_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/your_username/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/your_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/your_username/repo_name/blob/master/LICENSE
