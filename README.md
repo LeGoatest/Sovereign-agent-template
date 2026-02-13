@@ -36,23 +36,5 @@ All work must comply with the hierarchy defined in `docs/ARCHITECTURE_INDEX.md`.
 - `Jules/` -> Agent operating instructions and procedural skills (compliant with `agentskills.io`).
 - `.jtasks/` -> Deterministic planning and execution records.
 
-## 5. Document Precedence (Summary)
-
-1. `docs/ARCHITECTURE_RULES.md`
-2. `docs/SECURITY_MODEL.md`
-3. `docs/ARCHITECTURE_INDEX.md`
-4. `Jules/JULES.md`
-5. `Jules/TASK_GROUPS.md`
-6. `Jules/SKILLS_INDEX.md`
-7. `Jules/skills/*/SKILL.md`
-8. `.jtasks/**` (non-canonical, execution workspaces)
-
-## 6. How to use
-
-1) Open this repository in your agent environment.
-2) Paste the prompt from `NEW_PROJECT.md`.
-3) Create a spec for your project using `.jtasks/_template/`.
-4) Execute tasks only when explicitly instructed.
-
-## 7. Refusal Model
+## 5. Refusal Model
 The Agent MUST refuse any request that violates the canon or implies undocumented architectural drift. **Refusal is a sign of system integrity.**

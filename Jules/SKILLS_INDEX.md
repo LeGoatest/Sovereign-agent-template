@@ -1,26 +1,109 @@
-# Project Name | Skills Index (Canonical)
+# Project Name | Agent Skills Registry
 
-This document lists the **procedural skills** the Agent is authorized to use.
-No other procedures or methodologies are permitted.
-
----
-
-## 1) Governance Skills
-- **audit-governance**: Audit and update canonical documents.
-- **bootstrap-project**: Initialize governance in an existing repository.
-
-## 2) Planning Skills
-- **spec-mode**: Protocol for requirements, design, and task creation.
-
-## 3) Operational Skills
-- **cicd-ops**: Manage CI/CD pipelines and infrastructure artifacts.
-- **doc-maintainer**: Maintenance of non-canonical documentation.
-
-## 4) Implementation & Verification Skills
-- **test-enforcer**: Enforcement of testing and validation rules.
-- **wdbasic-frontend**: Specific procedure for building frontend components.
+This document defines the **procedural skill system**.
+Skills are approved playbooks for repeatable tasks.
 
 ---
 
-## Constraint
-The Agent MUST NOT invent or combine procedures outside of these defined skills.
+## 1) Authority Model
+
+All skills are subordinate to canonical documents.
+If a skill conflicts with any document in `docs/`, the skill is ignored.
+
+---
+
+## 2) Standard Structure (Compliance: agentskills.io)
+
+This repository follows the **Agent Skills** specification for modular procedural knowledge. Each skill folder MUST contain:
+
+- `SKILL.md`: Mandatory instructions and metadata.
+- `scripts/`: (Optional) Executable scripts or tools used by the skill.
+- `references/`: (Optional) Deep-dive documentation or lookup data.
+- `assets/`: (Optional) Static files, templates, or schemas.
+
+---
+
+## 3) Available Skills
+
+### spec-mode/SKILL.md
+**Use when:**
+- building a non-trivial feature
+- work spans multiple files
+- a plan → task list → execution workflow is needed
+
+**Task group:** docs
+
+**Reads first:**
+- JULES.md
+- TASK_GROUPS.md
+
+### wdbasic-frontend/SKILL.md
+**Use when:**
+- building or modifying frontend components
+- implementing HTMX interactivity
+- designing marketing or product surfaces
+
+**Task group:** development
+
+**Reads first:**
+- WDBASIC.md
+- ARCHITECTURE_RULES.md
+
+### audit-governance/SKILL.md
+**Use when:**
+- performing a security or architectural review
+- checking for drift between code and docs
+- verifying task compliance before submission
+
+**Task group:** audit
+
+**Reads first:**
+- ARCHITECTURE_RULES.md
+- SECURITY_MODEL.md
+
+### test-enforcer/SKILL.md
+**Use when:**
+- implementing new features
+- fixing bugs
+- verifying system invariants
+
+**Task group:** development
+
+**Reads first:**
+- ARCHITECTURE_RULES.md
+- PROJECT_PROFILE.md
+
+### doc-maintainer/SKILL.md
+**Use when:**
+- a spec in `.jtasks/` is completed and finalized
+- terminology needs to be synchronized
+- a permanent decision record is required
+
+**Task group:** docs
+
+**Reads first:**
+- DECISIONS.md
+- TERMINOLOGY.md
+
+### cicd-ops/SKILL.md
+**Use when:**
+- setting up or modifying CI/CD pipelines
+- adding linting or formatting automation
+- configuring build systems (Makefiles)
+
+**Task group:** operations
+
+**Reads first:**
+- PROJECT_PROFILE.md
+
+### bootstrap-project/SKILL.md
+**Use when:**
+- Jules is first introduced to a repository
+- governance/canon files are missing or incomplete
+- the user requests “bootstrap”, “initialize”, or “set up rules/governance”
+
+**Task group:** docs
+
+**Reads first:**
+- JULES.md
+- TASK_GROUPS.md

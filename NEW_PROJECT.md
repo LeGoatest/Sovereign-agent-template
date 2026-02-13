@@ -11,11 +11,6 @@ If you are starting a new project or bringing the Sovereign Agent into an existi
 **Use Spec Mode (.jtasks) for all non-trivial feature development.**
 **Always respect the precedence hierarchy.**
 
-Read this repository and treat it as the canonical project template.
-Initialize governance, task groups, and skills exactly as defined here.
-Create an initial specification using the provided spec templates in `.jtasks/_template/`.
-Do not execute tasks unless explicitly instructed.
-
 ---
 
 This ensures the Agent immediately adopts the Sovereign governance model.
