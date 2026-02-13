@@ -1,28 +1,37 @@
-# Canonical Architecture Index (v1.0)
+# Sovereign Agent | Architectural Index (Precedence & Governance)
 
-This document defines precedence for all documents.
+This document defines the **canonical order of precedence** for all documentation in this project.
+It is the secondary authority for resolving conflicts, as defined in `Jules/JULES.md`.
 
-## Precedence (Highest → Lowest)
+---
 
-1. ARCHITECTURE_RULES.md
-2. SECURITY_MODEL.md
-3. ARCHITECTURE_INDEX.md
-4. DECISIONS.md
-5. TERMINOLOGY.md
-6. DOC_STYLE.md
-7. ENFORCEMENT_MATRIX.md
-8. Agent governance files under \`Jules/\`
-9. Skills under \`Jules/skills/\`
-10. Specs under \`Jules/specs/\`
+## 1) Absolute Precedence List
 
-If documents conflict, the higher-precedence document wins.
+In the event of a conflict between documents, the document appearing **higher in this list** always wins. Agents MUST refuse any request that violates a higher-precedence rule.
 
-## Notes
+1. [ARCHITECTURE_RULES.md](./ARCHITECTURE_RULES.md)
+2. [SYSTEM_AXIOMS.md](./SYSTEM_AXIOMS.md)
+3. [SECURITY_MODEL.md](./SECURITY_MODEL.md)
+4. [INVARIANT_MODEL.md](./INVARIANT_MODEL.md)
+5. [CONTRACT_MODEL.md](./CONTRACT_MODEL.md)
+6. [ARCHITECTURE_INDEX.md](./ARCHITECTURE_INDEX.md)
+7. [MUTATION_PROCESS.md](./MUTATION_PROCESS.md)
+8. [VERSION_LOCKING.md](./VERSION_LOCKING.md)
+9. [DECISIONS.md](./DECISIONS.md)
+10. [TERMINOLOGY.md](./TERMINOLOGY.md)
+11. [DOC_STYLE.md](./DOC_STYLE.md)
+12. [ENFORCEMENT_MATRIX.md](./ENFORCEMENT_MATRIX.md)
+13. [WDBASIC.md](./WDBASIC.md)
+14. [JULES.md](../Jules/JULES.md)
+15. [TASK_GROUPS.md](../Jules/TASK_GROUPS.md)
+16. [SKILLS_INDEX.md](../Jules/SKILLS_INDEX.md)
+17. [SKILL.md files](../Jules/skills/)
+18. [Spec files (in .jtasks)](../.jtasks/)
 
-- Skills and specs are execution scaffolding only.
-- Canonical architecture must not be overwritten by agent output.
-## Agent Governance
-- ../Jules/JULES.md
-- ../Jules/TASK_GROUPS.md
-- ../Jules/SKILLS_INDEX.md
-- ../Jules/specs/_template/
+---
+
+## 2) Summary
+
+If a rule in a lower-precedence document contradicts a higher one, the lower rule is **void**.
+The Agent MUST refuse any request that violates this hierarchy.
+The agent must STOP if design judgment is required but not specified in canon.

@@ -1,28 +1,16 @@
-# Decisions (ADR-lite) (v1.0)
+# Architectural Decisions (ADR)
 
-Record project decisions here.
+Use this document to record material architectural decisions.
+This log provides the "why" behind the "what" in ARCHITECTURE_RULES.md.
 
-## Template
+## ADR-000: Use Sovereign Agent Template
+- **Status**: Accepted
+- **Context**: Need a deterministic governance model for AI agents.
+- **Decision**: Adopt the SAGT framework (docs/ + Jules/ + .jtasks/).
+- **Consequences**: All changes must follow spec-first workflow; agent must refuse out-of-bounds requests.
 
-### D-0001: <decision title>
-- Date: <YYYY-MM-DD>
-- Status: Proposed | Accepted | Rejected | Superseded
-- Context:
-  - What problem or risk required a decision?
-  - What constraints (security, architecture, delivery) influenced options?
-- Decision:
-  - State the selected option clearly.
-  - State the scope where this decision applies.
-- Consequences:
-  - Expected benefits
-  - Tradeoffs and risks
-  - Follow-up work required
-- References:
-  - Related canonical docs
-  - Related specs, PRs, or issue links
-
-## Decision hygiene rules
-
-- Architecture-impacting work must reference an accepted decision.
-- Superseding a decision requires a new decision record.
-- Keep decision IDs stable; never re-use IDs for different outcomes.
+## ADR-001: [Title]
+- **Status**: [Proposed | Accepted | Superseded]
+- **Context**: [Why is this change needed?]
+- **Decision**: [What is the change?]
+- **Consequences**: [What is the impact?]

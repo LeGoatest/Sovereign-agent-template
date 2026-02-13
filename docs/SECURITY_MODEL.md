@@ -1,56 +1,49 @@
-# Security Model (v1.0)
+# Project Name | Security Model
 
-Authority: subordinate only to ARCHITECTURE_RULES.md.
+This document defines the security architecture and trust boundaries of the system.
+Authority: subordinate only to ARCHITECTURE_RULES.md and SYSTEM_AXIOMS.md.
 
-## Threat model summary
+## 1) Threat Model
+### Assets:
+- Canonical governance documents under `docs/`
+- Agent control-plane configuration under `Jules/`
+- Generated specs and tasks in `.jtasks/` that may encode operational intent
 
-Assets:
-- canonical governance documents under \`docs/\`
-- agent control-plane configuration under \`Jules/\`
-- generated specs and tasks that may encode operational intent
+### Adversaries:
+- Unauthorized contributors attempting policy bypass
+- Prompt-injection attempts that conflict with canon
+- Accidental misconfiguration by well-intentioned maintainers
 
-Adversaries:
-- unauthorized contributors attempting policy bypass
-- prompt-injection attempts that conflict with canon
-- accidental misconfiguration by well-intentioned maintainers
+### Entry points:
+- Pull requests and direct commits
+- Agent prompts and task instructions
+- Skill definitions and spec execution workflows
 
-Entry points:
-- pull requests and direct commits
-- agent prompts and task instructions
-- skill definitions and spec execution workflows
+## 2) Trust Boundaries
+- User intent vs canonical policy
+- Procedural skills vs canonical governance
+- Spec workspace output vs approved repository baseline
+- [Define boundaries such as client/server/external systems]
 
-Trust boundaries:
-- user intent vs canonical policy
-- procedural skills vs canonical governance
-- spec workspace output vs approved repository baseline
-- <define boundaries such as client/server/external systems>
+## 3) Mandatory Controls
+### Authentication & Authorization:
+- Repository write access must be limited to approved maintainers and automation identities.
+- Only authorized reviewers may approve canonical governance changes under `docs/` and `Jules/`.
 
-## Security requirements
+### Secrets Handling:
+- Never commit secrets.
+- Load secrets via environment variables or secret manager.
 
-Authentication:
-- repository write access must be limited to approved maintainers and automation identities
+### Input Validation:
+- Validate task instructions against canonical rules before execution.
+- Validate file-path outputs in tasks against declared allowed change surfaces.
 
-Authorization:
-- only authorized reviewers may approve canonical governance changes under \`docs/\` and \`Jules/\`
-- <rules>
+### Audit and Logging:
+- Record material governance updates in commit history and review discussion.
+- Keep refusal rationale explicit when work is blocked by canon.
 
-Secrets handling:
-- never commit secrets
-- load secrets via environment variables or secret manager
-
-Input validation:
-- validate task instructions against canonical rules before execution
-- validate file-path outputs in tasks against declared allowed change surfaces
-
-Audit and logging:
-- record material governance updates in commit history and review discussion
-- keep refusal rationale explicit when work is blocked by canon
-- validate inputs at boundaries
-- define what must be logged and what must not
-
-## Refusal rules (security)
-
+## 4) Refusal Rules (Security)
 Agents MUST refuse to:
-- add secrets to the repository
-- weaken authentication or authorization requirements
-- bypass security checks required by canon
+- Add secrets to the repository.
+- Weaken authentication or authorization requirements.
+- Bypass security checks required by canon.
