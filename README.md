@@ -5,7 +5,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Unlicense License][license-shield]][license-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -98,7 +98,23 @@ SAGT defines a strict **Governance Hierarchy**. All work must comply with the hi
 
 1.  **ARCHITECTURE_RULES.md**: The supreme law of the project.
 2.  **SYSTEM_AXIOMS.md**: The philosophical invariants.
-3.  **SECURITY_MODEL.md**: The trust and safety boundary.
+3.  **SAGT_OVERVIEW.md**: The Handbook. Complete structural guide.
+4.  **SECURITY_MODEL.md**: The trust and safety boundary.
+5.  **INVARIANT_MODEL.md**: The immutability layer.
+6.  **CONTRACT_MODEL.md**: Cross-plane communication.
+7.  **ARCHITECTURE_INDEX.md**: The governance registry.
+8.  **MUTATION_PROCESS.md**: Protocol for changing the law.
+9.  **VERSION_LOCKING.md**: Anchoring to specific canon states.
+10. **DECISIONS.md**: Architectural record.
+11. **TERMINOLOGY.md**: Project glossary.
+12. **DOC_STYLE.md**: Documentation standards.
+13. **ENFORCEMENT_MATRIX.md**: The strictness scale.
+14. **WDBASIC.md**: Frontend philosophy.
+15. **JULES.md**: Agent operating instructions.
+16. **TASK_GROUPS.md**: Permission registry.
+17. **SKILLS_INDEX.md**: Procedural registry.
+18. **SKILL.md files**: Approved playbooks.
+19. **Spec files (.jtasks)**: Specific iteration work orders.
 
 The Agent MUST refuse any request that violates the canon or implies undocumented architectural drift. **Refusal is a sign of system integrity.**
 
@@ -140,7 +156,7 @@ Contributions are welcome! Please follow the rules defined in `CONTRIBUTING.md`.
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the Unlicense License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,5 +176,5 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [stars-url]: https://github.com/your_username/repo_name/stargazers
 [issues-shield]: https://img.shields.io/github/issues/your_username/repo_name.svg?style=for-the-badge
 [issues-url]: https://github.com/your_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/your_username/repo_name.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/license-Unlicense-blue.svg?style=for-the-badge
 [license-url]: https://github.com/your_username/repo_name/blob/master/LICENSE
