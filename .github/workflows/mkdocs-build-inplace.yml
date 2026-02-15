@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "gh-pages" ]
     paths-ignore:
-      - "docs/**"          # prevent infinite loop (workflow commits docs/)
+      - "site/**"          # prevent infinite loop (workflow commits docs/)
   workflow_dispatch:
 
 permissions:
