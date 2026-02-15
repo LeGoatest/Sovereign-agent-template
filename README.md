@@ -16,6 +16,8 @@
     A formalized contract-governed multi-plane execution constitution for AI coding agents.
     <br />
     <a href="docs/ARCHITECTURE_INDEX.md"><strong>Explore the docs »</strong></a>
+    &middot;
+    <a href="docs/SAGT_OVERVIEW.md">View Handbook</a>
     <br />
     <br />
     <a href="BOOTSTRAP.md">Bootstrap Project</a>
