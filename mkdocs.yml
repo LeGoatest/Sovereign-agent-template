@@ -1,14 +1,18 @@
-site_name: Sovereign Agent Governance Template
-site_description: Deterministic governance framework for AI coding agents (SAGT)
+site_name: Sovereign Agent Governance Template (SAGT)
+site_description: Agent governance canon and Jules operating model
 site_url: https://legoatest.github.io/Sovereign-agent-template/
 repo_url: https://github.com/LeGoatest/Sovereign-agent-template
 repo_name: LeGoatest/Sovereign-agent-template
-edit_uri: edit/main/
+
+# IMPORTANT:
+# - mkdocs source lives in mkdocs-src/
+# - built site outputs to docs/ (so GitHub Pages can serve /docs)
+docs_dir: mkdocs-src
+site_dir: docs
 
 theme:
   name: material
   features:
-    - navigation.instant
     - navigation.sections
     - navigation.top
     - navigation.tracking
@@ -16,32 +20,17 @@ theme:
     - toc.follow
     - search.suggest
     - search.highlight
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+
+plugins:
+  - search
 
 markdown_extensions:
   - admonition
-  - attr_list
-  - footnotes
   - toc:
       permalink: true
   - pymdownx.superfences
   - pymdownx.details
-  - pymdownx.inlinehilite
-  - pymdownx.highlight
   - pymdownx.snippets
-  - pymdownx.tabbed:
-      alternate_style: true
-
-plugins:
-  - search
 
 nav:
   - Home: index.md
@@ -53,10 +42,10 @@ nav:
       - Terminology: canon/TERMINOLOGY.md
       - Doc Style: canon/DOC_STYLE.md
       - Enforcement Matrix: canon/ENFORCEMENT_MATRIX.md
-  - Governance (Jules):
+  - Jules:
       - JULES: jules/JULES.md
       - Task Groups: jules/TASK_GROUPS.md
       - Skills Index: jules/SKILLS_INDEX.md
-  - Bootstrapping:
-      - NEW_PROJECT: NEW_PROJECT.md
-      - BOOTSTRAP: BOOTSTRAP.md
+  - Root Files:
+      - NEW_PROJECT: root/NEW_PROJECT.md
+      - BOOTSTRAP: root/BOOTSTRAP.md
