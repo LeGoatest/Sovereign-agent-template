@@ -35,13 +35,13 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Build site into docs/
+      - name: Build site into site/
         run: mkdocs build --clean
 
-      - name: Commit built site (docs/)
+      - name: Commit built site (site/)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs mkdocs.yml mkdocs-src requirements.txt
+          git add site mkdocs.yml docs requirements.txt
           git commit -m "docs: build mkdocs site" || echo "No changes to commit"
           git push origin gh-pages
