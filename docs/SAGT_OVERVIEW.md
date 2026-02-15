@@ -22,6 +22,9 @@ The foundation of SAGT is built upon six constitutional axioms that define the "
 
 SAGT enforces a strict **Order of Precedence**. When the Agent encounters a conflict, the document higher in this list always wins.
 
+### YAML Rule Schema (sagrule)
+Canonical documents may contain structured `yaml sagrule` blocks. These blocks take precedence as machine-validated laws and are compiled by the `canon-compile.sh` tool.
+
 1.  **ARCHITECTURE_RULES.md**: The Supreme Law. Defines what is allowed.
 2.  **SYSTEM_AXIOMS.md**: The Philosophical Invariants. Defines why it is allowed.
 3.  **SAGT_OVERVIEW.md**: The Handbook. Complete structural guide.
@@ -82,6 +85,7 @@ Skills in SAGT are modular, project-agnostic playbooks compliant with the **Agen
 - \`README.md\`: The "Doctrine Statement" and entry point.
 - \`BOOTSTRAP.md\`: Instructions for initializing SAGT in a new project.
 - \`NEW_PROJECT.md\`: The "Onboarding Prompt" to introduce the agent to the rules.
+- \`canon-compile.sh\`: The Lightweight Canon Compiler.
 
 ### docs/ (The Canon)
 - \`ARCHITECTURE_INDEX.md\`: The master list of document precedence.

@@ -76,6 +76,13 @@ Beyond basic mechanics, SAGT enforces sophisticated organizational invariants:
 <!-- GETTING STARTED -->
 ## Getting Started
 
+### Prerequisites
+The Canon Compiler requires `PyYAML`:
+```sh
+pip install PyYAML
+```
+
+### Installation
 To implement SAGT in your project:
 
 1. Refer to [BOOTSTRAP.md](BOOTSTRAP.md) to initialize governance in an existing repository.

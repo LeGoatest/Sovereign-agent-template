@@ -39,7 +39,13 @@ The following files are provided for token efficiency or quick reference. They c
 
 ---
 
-## 3) Summary
+## 3) YAML Rule Schema (sagrule)
+
+Canonical rules may be expressed in structured `yaml sagrule` blocks within these documents. These rules are machine-validated and take precedence as the most precise expression of the project's law. The `canon-compile.sh` tool MUST be used to verify the consistency of these rules.
+
+---
+
+## 4) Summary
 
 If a rule in a lower-precedence document contradicts a higher one, the lower rule is **void**.
 The Agent MUST refuse any request that violates this hierarchy.
