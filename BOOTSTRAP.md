@@ -1,16 +1,42 @@
-# Bootstrapping a New Project
+# Bootstrapping a New Project (SAGT v2.1)
 
-To initialize a project using the Sovereign Agent Template:
+To initialize a project using the Sovereign Agent Template, the Agent and Human must follow this multi-step process:
 
-1. **Initialize the Repository**:
-   - Create the `docs/`, `Jules/`, and `.jtasks/` structure if not already present.
-2. **Define the Canon**:
-   - Fill in `docs/ARCHITECTURE_RULES.md` with the foundational rules of the system (e.g., "Must use Go", "No global state").
-   - Define the `docs/SECURITY_MODEL.md`.
-3. **Initialize Agent Governance**:
-   - Update `Jules/JULES.md` and `Jules/TASK_GROUPS.md` if project-specific task groups are needed.
-4. **First Spec**:
-   - Use `spec-mode` to create the first project-init spec in `.jtasks/`.
-   - The first spec should define the "Runnable Baseline" for the project.
+## Step 1: Detect Project Language, Tooling, & Gaps
+The Agent scans the repository to inventory folders, languages, and build systems. A `GAP_REPORT.md` is produced identifying missing governance components.
 
-Once the canon is established, the Agent will operate strictly within those boundaries.
+## Step 2: Generate Proposed Project Profile
+The Agent drafts `docs/PROJECT_PROFILE.md` based strictly on repo evidence. It must be labeled clearly as **[DRAFT - NEEDS HUMAN VALIDATION]**.
+
+## Step 3: Output Proposed Canon (DRAFT)
+The Agent generates drafts for missing canon docs (`ARCHITECTURE_RULES.md`, `SECURITY_MODEL.md`, etc.).
+
+**Anti-Hallucination Rule (Mandatory):**
+- When drafting canonical documents (especially `SECURITY_MODEL.md`):
+  - MUST NOT invent trust boundaries, threat models, roles, or security properties.
+  - MUST derive content only from explicit repository evidence.
+  - If no security model evidence exists:
+    - `SECURITY_MODEL.md` MUST contain ONLY:
+      - "TODO: Security model not yet defined"
+      - TODO list of questions/decisions
+      - NO assumptions, NO proposed boundaries, NO defaults
+  - If evidence incomplete:
+    - Draft MUST be partial
+    - Unknowns MUST be marked TODO
+- Violation requires refusal.
+
+## Step 4: Propose Additional Skills
+The Agent suggests specific skill folders in `Jules/skills/` based on detected tooling.
+
+## Step 5: Finalize Unresolved Decisions
+The Agent produces a `DECISIONS_NEEDED.md` file listing all unanswered questions required to finalize the canon.
+
+## Step 6: Stop Point (HITL)
+After producing the draft pack and `DECISIONS_NEEDED.md`:
+1. STOP.
+2. Present the `DECISIONS_NEEDED.md` to the user.
+3. Wait for the user to validate the `PROJECT_PROFILE.md` and answer the pending decisions.
+4. **Do NOT** proceed to implementation or "Final Canon" status without explicit instruction.
+
+**Emit:**
+[AWAIT_HUMAN_VALIDATION]

@@ -49,11 +49,19 @@ Generate drafts for missing canon docs:
 - `docs/SECURITY_MODEL.md`
 - `docs/ARCHITECTURE_INDEX.md`
 
-Rules for drafting:
-- Derive only from observed repo structure and existing docs.
-- Include `TODO` sections instead of inventing decisions.
-- Include a “Known Invariants” section sourced from repo evidence.
-- Include an “Unknown / Needs Decision” section.
+**Anti-Hallucination Rule (Mandatory):**
+- When drafting canonical documents (especially `SECURITY_MODEL.md`):
+  - MUST NOT invent trust boundaries, threat models, roles, or security properties.
+  - MUST derive content only from explicit repository evidence.
+  - If no security model evidence exists:
+    - `SECURITY_MODEL.md` MUST contain ONLY:
+      - "TODO: Security model not yet defined"
+      - TODO list of questions/decisions
+      - NO assumptions, NO proposed boundaries, NO defaults
+  - If evidence incomplete:
+    - Draft MUST be partial
+    - Unknowns MUST be marked TODO
+- Violation requires refusal.
 
 ### Step 4: Propose Additional Skills
 Based on detected tooling (e.g., HTMX, Tailwind, Gin), suggest specific skill folders that should be created in `Jules/skills/`.
@@ -73,3 +81,6 @@ After producing the draft pack and `DECISIONS_NEEDED.md`:
 2. Present the `DECISIONS_NEEDED.md` to the user.
 3. Wait for the user to validate the `PROJECT_PROFILE.md` and answer the pending decisions.
 4. **Do NOT** proceed to implementation or "Final Canon" status without explicit instruction.
+
+**Emit:**
+[AWAIT_HUMAN_VALIDATION]

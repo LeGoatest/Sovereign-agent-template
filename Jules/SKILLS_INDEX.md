@@ -61,6 +61,16 @@ This repository follows the **Agent Skills** specification for modular procedura
 - ARCHITECTURE_RULES.md
 - SECURITY_MODEL.md
 
+### constitutional-check/SKILL.md
+**Use when:**
+- scanning for logical contradictions in canon before generating tasks
+- performing a governance integrity pass
+
+**Task group:** audit
+
+**Reads first:**
+- ARCHITECTURE_INDEX.md
+
 ### test-enforcer/SKILL.md
 **Use when:**
 - implementing new features
@@ -95,6 +105,17 @@ This repository follows the **Agent Skills** specification for modular procedura
 
 **Reads first:**
 - PROJECT_PROFILE.md
+
+### context-pruning/SKILL.md
+**Use when:**
+- producing a non-canonical docs/MINI_CANON.md to reduce token bloat
+- conversation context is large and needs optimization
+
+**Task group:** operations
+
+**Reads first:**
+- ARCHITECTURE_INDEX.md
+- JULES.md
 
 ### bootstrap-project/SKILL.md
 **Use when:**

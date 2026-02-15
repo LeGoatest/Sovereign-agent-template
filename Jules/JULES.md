@@ -77,3 +77,25 @@ Refusal is **success**, not failure.
 
 If a request matches a procedural task listed in `Jules/SKILLS_INDEX.md`, the Agent MUST load and follow the corresponding `SKILL.md`.
 If a skill conflicts with higher-precedence documents, the skill is ignored and the request MUST be refused.
+
+---
+
+## 7) HITL Break-Glass Protocol
+
+When a critical decision or validation is required, the Agent MUST use the **Break-Glass Marker**.
+
+**Marker:**
+[AWAIT_HUMAN_VALIDATION]
+
+**Rules:**
+- MUST appear alone on its own line.
+- MUST halt execution immediately.
+- MAY include a short bulleted list after the marker explaining what is blocked or what decision is required.
+
+**Triggers:**
+- Canon conflict
+- Ambiguous task group
+- Security boundary modification
+- Spec approval required
+- STOP in any workflow
+- Encountering "Unknown / Needs Decision" during bootstrap
