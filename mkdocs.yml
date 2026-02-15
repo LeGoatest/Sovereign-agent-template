@@ -7,8 +7,8 @@ repo_name: LeGoatest/Sovereign-agent-template
 # IMPORTANT:
 # - mkdocs source lives in mkdocs-src/
 # - built site outputs to docs/ (so GitHub Pages can serve /docs)
-docs_dir: docs
-site_dir: site
+docs_dir: src
+site_dir: docs
 
 theme:
   name: material
