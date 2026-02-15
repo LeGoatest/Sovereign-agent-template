@@ -31,7 +31,15 @@ In the event of a conflict between documents, the document appearing **higher in
 
 ---
 
-## 2) Summary
+## 2) Non-Canonical Convenience Files
+
+The following files are provided for token efficiency or quick reference. They carry NO canonical authority and are subordinate to all documents listed above.
+
+- [docs/MINI_CANON.md](./MINI_CANON.md)
+
+---
+
+## 3) Summary
 
 If a rule in a lower-precedence document contradicts a higher one, the lower rule is **void**.
 The Agent MUST refuse any request that violates this hierarchy.

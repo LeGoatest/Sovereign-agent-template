@@ -33,8 +33,12 @@ Identify the scope of the audit:
 ### Step 3: Scan & Evidence Collection
 For each file in scope:
 - Check for direct violations of the rule checklist.
+- **Shadow Rule Detection**: Identify any non-trivial pattern introduced in code that lacks an authorizing canon citation.
+  - If unauthorized: Emit `[AWAIT_HUMAN_VALIDATION]` and offer to simplify or create a Mutation Spec.
+- **Dead Canon TTL Check**: Review `.jtasks` history for Canon Citations.
+  - Any rule not cited within 180 days MUST be flagged for "Deprecation Review".
+  - MUST NOT be auto-deleted.
 - Identify "Ghost Architecture" (patterns that exist in code but aren't in `docs/`).
-- Identify "Dead Canon" (rules in `docs/` that are ignored in code).
 
 ### Step 4: Output Audit Report
 Produce an `AUDIT_REPORT.md` (usually in the current `.jtasks` folder or root).
