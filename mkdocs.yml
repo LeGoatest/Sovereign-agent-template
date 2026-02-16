@@ -57,7 +57,7 @@ nav:
       - Execution Lifecycle: overview/execution-lifecycle.md
 
   - Canon:
-      - Introduction: canon/index.md
+      - Overview: canon/index.md
       - Architecture Index: canon/ARCHITECTURE_INDEX.md
       - Architecture Rules: canon/ARCHITECTURE_RULES.md
       - Security Model: canon/security-model.md
@@ -71,6 +71,7 @@ nav:
       - Enforcement Matrix: canon/ENFORCEMENT_MATRIX.md
 
   - Governance:
+      - Overview:  governance/index.md
       - Task Groups: governance/task-groups.md
       - Skills: governance/skills.md
       - Spec Workflow: governance/spec-workflow.md
@@ -79,13 +80,16 @@ nav:
       - Handover Protocol: governance/handover.md
 
   - Policy:
+      - Overview: policy/index.md
       - Policy Engine: policy/index.md
 
   - Reference:
+      - Overview: reference/index.md
       - Determinism: reference/determinism.md
       - Refusal Model: reference/refusal-model.md
 
   - Operations:
+      - Overview: operations/index.md
       - Operational Playbook: operations/playbook.md
       - Governance Maturity Model: operations/maturity-model.md
       - Stress Scenarios: operations/stress-scenarios.md
