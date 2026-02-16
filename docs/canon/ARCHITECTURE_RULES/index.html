@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://legoatest.github.io/Sovereign-agent-template/operations/adoption-guide/">
+        <link rel="canonical" href="https://legoatest.github.io/Sovereign-agent-template/canon/ARCHITECTURE_RULES/">
       
       
-        <link rel="prev" href="../compliance-mapping/">
+        <link rel="prev" href="../ARCHITECTURE_INDEX/">
       
+      
+        <link rel="next" href="../security-model/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Adoption Guide - Sovereign Agent Governance Template (SAGT)</title>
+        <title>Architecture Rules - Sovereign Agent Governance Template (SAGT)</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#governance-adoption-guide" class="md-skip">
+        <a href="#architecture_rules" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adoption Guide
+              Architecture Rules
             
           </span>
         </div>
@@ -396,8 +398,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -408,11 +412,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -428,7 +432,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Canon
@@ -442,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/ARCHITECTURE_INDEX/" class="md-nav__link">
+      <a href="../ARCHITECTURE_INDEX/" class="md-nav__link">
         
   
   
@@ -462,10 +466,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../canon/ARCHITECTURE_RULES/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Architecture Rules
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -476,6 +502,116 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a1-canon-precedence-is-mandatory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A1 — Canon Precedence Is Mandatory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a2-one-task-group-per-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A2 — One Task Group per Execution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a3-skills-are-procedural-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A3 — Skills Are Procedural Only
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a4-spec-first-for-non-trivial-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A4 — Spec-First for Non-Trivial Work
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a5-refusal-is-enforced" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A5 — Refusal Is Enforced
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a6-protected-zones-are-immutable-without-mutation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A6 — Protected Zones Are Immutable Without Mutation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a7-mutation-is-the-only-legal-canon-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A7 — Mutation Is the Only Legal Canon Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a8-no-shadow-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A8 — No Shadow Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a9-determinism-is-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A9 — Determinism Is Required
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rule-a10-hitl-break-glass-marker-is-mandatory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rule A10 — HITL Break-Glass Marker Is Mandatory
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -488,7 +624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/security-model/" class="md-nav__link">
+      <a href="../security-model/" class="md-nav__link">
         
   
   
@@ -511,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/protected-zones/" class="md-nav__link">
+      <a href="../protected-zones/" class="md-nav__link">
         
   
   
@@ -534,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/mutation/" class="md-nav__link">
+      <a href="../mutation/" class="md-nav__link">
         
   
   
@@ -557,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/rule-schema-v2/" class="md-nav__link">
+      <a href="../rule-schema-v2/" class="md-nav__link">
         
   
   
@@ -580,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/compiler/" class="md-nav__link">
+      <a href="../compiler/" class="md-nav__link">
         
   
   
@@ -603,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/DECISIONS.md" class="md-nav__link">
+      <a href="../DECISIONS.md" class="md-nav__link">
         
   
   
@@ -626,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/TERMINOLOGY.md" class="md-nav__link">
+      <a href="../TERMINOLOGY.md" class="md-nav__link">
         
   
   
@@ -649,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/DOC_STYLE.md" class="md-nav__link">
+      <a href="../DOC_STYLE.md" class="md-nav__link">
         
   
   
@@ -672,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../canon/ENFORCEMENT_MATRIX.md" class="md-nav__link">
+      <a href="../ENFORCEMENT_MATRIX.md" class="md-nav__link">
         
   
   
@@ -1056,8 +1192,6 @@
       
   
   
-    
-  
   
   
     
@@ -1070,11 +1204,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1090,7 +1224,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Operations
@@ -1104,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../playbook/" class="md-nav__link">
+      <a href="../../operations/playbook/" class="md-nav__link">
         
   
   
@@ -1127,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maturity-model/" class="md-nav__link">
+      <a href="../../operations/maturity-model/" class="md-nav__link">
         
   
   
@@ -1150,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stress-scenarios/" class="md-nav__link">
+      <a href="../../operations/stress-scenarios/" class="md-nav__link">
         
   
   
@@ -1173,7 +1307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../compliance-mapping/" class="md-nav__link">
+      <a href="../../operations/compliance-mapping/" class="md-nav__link">
         
   
   
@@ -1193,32 +1327,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Adoption Guide
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../operations/adoption-guide/" class="md-nav__link">
         
   
   
@@ -1229,116 +1341,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-adoption-requires-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why Adoption Requires Structure
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adoption-phases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adoption Phases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-1-canon-establishment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phase 1 — Canon Establishment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-2-spec-discipline" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phase 2 — Spec Discipline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-3-structured-enforcement" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phase 3 — Structured Enforcement
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-4-observability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phase 4 — Observability
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-5-deterministic-continuity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Phase 5 — Deterministic Continuity
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#organizational-role-alignment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Organizational Role Alignment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resistance-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resistance Patterns
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-adoption-mistakes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Adoption Mistakes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1593,90 +1595,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-adoption-requires-structure" class="md-nav__link">
+  <a href="#rule-a1-canon-precedence-is-mandatory" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Adoption Requires Structure
+      Rule A1 — Canon Precedence Is Mandatory
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#adoption-phases" class="md-nav__link">
+  <a href="#rule-a2-one-task-group-per-execution" class="md-nav__link">
     <span class="md-ellipsis">
-      Adoption Phases
+      Rule A2 — One Task Group per Execution
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-1-canon-establishment" class="md-nav__link">
+  <a href="#rule-a3-skills-are-procedural-only" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 1 — Canon Establishment
+      Rule A3 — Skills Are Procedural Only
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-2-spec-discipline" class="md-nav__link">
+  <a href="#rule-a4-spec-first-for-non-trivial-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 2 — Spec Discipline
+      Rule A4 — Spec-First for Non-Trivial Work
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-3-structured-enforcement" class="md-nav__link">
+  <a href="#rule-a5-refusal-is-enforced" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 3 — Structured Enforcement
+      Rule A5 — Refusal Is Enforced
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-4-observability" class="md-nav__link">
+  <a href="#rule-a6-protected-zones-are-immutable-without-mutation" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 4 — Observability
+      Rule A6 — Protected Zones Are Immutable Without Mutation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phase-5-deterministic-continuity" class="md-nav__link">
+  <a href="#rule-a7-mutation-is-the-only-legal-canon-change" class="md-nav__link">
     <span class="md-ellipsis">
-      Phase 5 — Deterministic Continuity
+      Rule A7 — Mutation Is the Only Legal Canon Change
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#organizational-role-alignment" class="md-nav__link">
+  <a href="#rule-a8-no-shadow-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Organizational Role Alignment
+      Rule A8 — No Shadow Architecture
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resistance-patterns" class="md-nav__link">
+  <a href="#rule-a9-determinism-is-required" class="md-nav__link">
     <span class="md-ellipsis">
-      Resistance Patterns
+      Rule A9 — Determinism Is Required
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-adoption-mistakes" class="md-nav__link">
+  <a href="#rule-a10-hitl-break-glass-marker-is-mandatory" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Adoption Mistakes
+      Rule A10 — HITL Break-Glass Marker Is Mandatory
     </span>
   </a>
   
@@ -1701,135 +1703,99 @@
   
 
 
-<h1 id="governance-adoption-guide">Governance Adoption Guide<a class="headerlink" href="#governance-adoption-guide" title="Permanent link">&para;</a></h1>
-<p>SAGT is not a feature.</p>
-<p>It is an operating model.</p>
-<p>Adoption must be deliberate.</p>
-<p>This guide explains how teams transition from informal AI usage to governed AI-assisted development under SAGT.</p>
+<h1 id="architecture_rules">ARCHITECTURE_RULES<a class="headerlink" href="#architecture_rules" title="Permanent link">&para;</a></h1>
+<p>This document defines the highest-precedence invariants for SAGT.</p>
+<p>These rules are binding.</p>
+<p>Agents must refuse when these rules are violated or when compliance is ambiguous.</p>
+<p>This document governs governance. It does not govern downstream application architecture.</p>
 <hr />
-<h2 id="why-adoption-requires-structure">Why Adoption Requires Structure<a class="headerlink" href="#why-adoption-requires-structure" title="Permanent link">&para;</a></h2>
-<p>Most teams already use AI.</p>
-<p>However, common patterns include:</p>
+<h2 id="rule-a1-canon-precedence-is-mandatory">Rule A1 — Canon Precedence Is Mandatory<a class="headerlink" href="#rule-a1-canon-precedence-is-mandatory" title="Permanent link">&para;</a></h2>
+<p>Canonical precedence order must be followed as declared in <code>ARCHITECTURE_INDEX.md</code>.</p>
+<p>Agents must not reinterpret precedence or “merge” conflicting rules.</p>
+<p>If precedence does not resolve a conflict, the agent must halt and emit:</p>
+<p>[AWAIT_HUMAN_VALIDATION]</p>
+<hr />
+<h2 id="rule-a2-one-task-group-per-execution">Rule A2 — One Task Group per Execution<a class="headerlink" href="#rule-a2-one-task-group-per-execution" title="Permanent link">&para;</a></h2>
+<p>Every request must be classified into exactly one task group.</p>
+<p>Mixed task groups are forbidden.</p>
+<p>If classification is ambiguous, execution must halt and require human validation.</p>
+<p>Task groups define authority scope and must be treated as an intent firewall.</p>
+<hr />
+<h2 id="rule-a3-skills-are-procedural-only">Rule A3 — Skills Are Procedural Only<a class="headerlink" href="#rule-a3-skills-are-procedural-only" title="Permanent link">&para;</a></h2>
+<p>Skills may execute only deterministic procedures.</p>
+<p>Skills must not:</p>
 <ul>
-<li>Prompt-based iteration without traceability</li>
-<li>Architecture defined reactively</li>
-<li>Silent pattern drift</li>
-<li>Informal code generation</li>
-<li>Untracked structural changes</li>
+<li>Introduce architecture</li>
+<li>Modify canon</li>
+<li>Modify invariants</li>
+<li>Fill missing security boundaries</li>
+<li>Interpret ambiguous canon</li>
 </ul>
-<p>SAGT introduces discipline.</p>
-<p>Adoption is less about adding rules and more about formalizing authority.</p>
+<p>If a skill requires design judgment, it must stop.</p>
 <hr />
-<h2 id="adoption-phases">Adoption Phases<a class="headerlink" href="#adoption-phases" title="Permanent link">&para;</a></h2>
-<p>Adoption should occur in phases.</p>
-<p>Immediate full enforcement often causes friction.</p>
-<p>Phased rollout allows governance to stabilize.</p>
-<hr />
-<h2 id="phase-1-canon-establishment">Phase 1 — Canon Establishment<a class="headerlink" href="#phase-1-canon-establishment" title="Permanent link">&para;</a></h2>
-<p>Objective:
-Define structural authority.</p>
-<p>Actions:</p>
+<h2 id="rule-a4-spec-first-for-non-trivial-work">Rule A4 — Spec-First for Non-Trivial Work<a class="headerlink" href="#rule-a4-spec-first-for-non-trivial-work" title="Permanent link">&para;</a></h2>
+<p>Non-trivial work requires spec artifacts:</p>
 <ul>
-<li>Write initial ARCHITECTURE_RULES.md</li>
-<li>Define precedence</li>
-<li>Identify protected zones</li>
-<li>Establish mutation protocol</li>
-<li>Define task groups</li>
+<li>requirements.md</li>
+<li>design.md</li>
+<li>tasks.md</li>
 </ul>
-<p>Focus:
-Clarity over completeness.</p>
-<p>This phase moves the team from Level 0 to Level 1 maturity.</p>
+<p>Execution begins only after explicit human instruction.</p>
+<p>If a request is non-trivial and no spec exists, the agent must halt and require spec generation.</p>
 <hr />
-<h2 id="phase-2-spec-discipline">Phase 2 — Spec Discipline<a class="headerlink" href="#phase-2-spec-discipline" title="Permanent link">&para;</a></h2>
-<p>Objective:
-Separate planning from execution.</p>
-<p>Actions:</p>
+<h2 id="rule-a5-refusal-is-enforced">Rule A5 — Refusal Is Enforced<a class="headerlink" href="#rule-a5-refusal-is-enforced" title="Permanent link">&para;</a></h2>
+<p>Refusal is required when:</p>
 <ul>
-<li>Enforce spec-first workflow</li>
-<li>Require requirements.md, design.md, tasks.md</li>
-<li>Introduce HITL approval gate</li>
-<li>Prevent execution before approval</li>
+<li>Canon conflicts exist</li>
+<li>Task group classification is ambiguous</li>
+<li>Protected zones would be modified without mutation</li>
+<li>Security model is undefined or lacks evidence</li>
+<li>Determinism cannot be guaranteed</li>
+<li>Compiler validation fails (if enabled)</li>
 </ul>
-<p>Focus:
-Temporal governance.</p>
-<p>This phase prevents architecture from emerging implicitly.</p>
+<p>Refusal must be explicit and must stop execution.</p>
 <hr />
-<h2 id="phase-3-structured-enforcement">Phase 3 — Structured Enforcement<a class="headerlink" href="#phase-3-structured-enforcement" title="Permanent link">&para;</a></h2>
-<p>Objective:
-Formalize rule validation.</p>
-<p>Actions:</p>
+<h2 id="rule-a6-protected-zones-are-immutable-without-mutation">Rule A6 — Protected Zones Are Immutable Without Mutation<a class="headerlink" href="#rule-a6-protected-zones-are-immutable-without-mutation" title="Permanent link">&para;</a></h2>
+<p>Protected zones define structural invariants and security boundaries.</p>
+<p>Protected zones cannot be modified by:</p>
 <ul>
-<li>Introduce Rule Schema v2</li>
-<li>Implement Canon Compiler</li>
-<li>Generate enforcement matrix</li>
-<li>Require compiler validation before execution</li>
+<li>Skills</li>
+<li>Implementation tasks</li>
+<li>Routine documentation updates</li>
 </ul>
-<p>Focus:
-Mechanical integrity.</p>
-<p>This phase moves governance from advisory to enforceable.</p>
+<p>Any modification requires Canon Mutation and human validation.</p>
 <hr />
-<h2 id="phase-4-observability">Phase 4 — Observability<a class="headerlink" href="#phase-4-observability" title="Permanent link">&para;</a></h2>
-<p>Objective:
-Detect slow drift.</p>
-<p>Actions:</p>
+<h2 id="rule-a7-mutation-is-the-only-legal-canon-change">Rule A7 — Mutation Is the Only Legal Canon Change<a class="headerlink" href="#rule-a7-mutation-is-the-only-legal-canon-change" title="Permanent link">&para;</a></h2>
+<p>Canon may only change through formal mutation.</p>
+<p>Mutation must include:</p>
 <ul>
-<li>Implement Policy Engine</li>
-<li>Log refusal frequency</li>
-<li>Track shadow pattern detection</li>
-<li>Monitor mutation frequency</li>
-<li>Establish governance review cadence</li>
+<li>Proposal</li>
+<li>Impact analysis</li>
+<li>Human validation</li>
+<li>Version traceability</li>
 </ul>
-<p>Focus:
-Proactive stability.</p>
-<p>This phase moves the system from reactive to preventative.</p>
+<p>Any attempt to “just update the docs” that modifies authority is a violation.</p>
 <hr />
-<h2 id="phase-5-deterministic-continuity">Phase 5 — Deterministic Continuity<a class="headerlink" href="#phase-5-deterministic-continuity" title="Permanent link">&para;</a></h2>
-<p>Objective:
-Guarantee reproducibility.</p>
-<p>Actions:</p>
+<h2 id="rule-a8-no-shadow-architecture">Rule A8 — No Shadow Architecture<a class="headerlink" href="#rule-a8-no-shadow-architecture" title="Permanent link">&para;</a></h2>
+<p>Agents must not introduce structural patterns not authorized by canon.</p>
+<p>If a pattern is needed:</p>
 <ul>
-<li>Log canon version per execution</li>
-<li>Enforce handover protocol</li>
-<li>Validate multi-model consistency</li>
-<li>Require full spec discipline</li>
+<li>remove it, or</li>
+<li>initiate a canon mutation to authorize it</li>
 </ul>
-<p>Focus:
-Long-term structural stability.</p>
-<p>This phase completes Level 4 maturity.</p>
+<p>Silent adoption is prohibited.</p>
 <hr />
-<h2 id="organizational-role-alignment">Organizational Role Alignment<a class="headerlink" href="#organizational-role-alignment" title="Permanent link">&para;</a></h2>
-<p>SAGT does not require new job titles.</p>
-<p>It clarifies responsibilities:</p>
-<ul>
-<li>Architects define canon.</li>
-<li>Developers write specs.</li>
-<li>Agents execute under governance.</li>
-<li>Humans approve mutation.</li>
-<li>Policy monitors system health.</li>
-</ul>
-<p>Authority remains layered.</p>
+<h2 id="rule-a9-determinism-is-required">Rule A9 — Determinism Is Required<a class="headerlink" href="#rule-a9-determinism-is-required" title="Permanent link">&para;</a></h2>
+<p>Given the same canon version, spec, and inputs, outputs must converge structurally.</p>
+<p>If determinism cannot be guaranteed due to ambiguity or missing authority, execution must halt.</p>
 <hr />
-<h2 id="resistance-patterns">Resistance Patterns<a class="headerlink" href="#resistance-patterns" title="Permanent link">&para;</a></h2>
-<p>Common resistance includes:</p>
-<ul>
-<li>“This slows us down.”</li>
-<li>“The agent already does this.”</li>
-<li>“We can just be careful.”</li>
-<li>“This is too formal.”</li>
-</ul>
-<p>Governance friction occurs only during transition.</p>
-<p>Long-term velocity increases because drift decreases.</p>
+<h2 id="rule-a10-hitl-break-glass-marker-is-mandatory">Rule A10 — HITL Break-Glass Marker Is Mandatory<a class="headerlink" href="#rule-a10-hitl-break-glass-marker-is-mandatory" title="Permanent link">&para;</a></h2>
+<p>When execution must pause for validation, the agent must emit:</p>
+<p>[AWAIT_HUMAN_VALIDATION]</p>
+<p>The marker must appear on its own line.</p>
+<p>After emitting it, the agent must not continue execution.</p>
 <hr />
-<h2 id="common-adoption-mistakes">Common Adoption Mistakes<a class="headerlink" href="#common-adoption-mistakes" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Skipping protected zone definition.</li>
-<li>Treating mutation as minor change.</li>
-<li>Allowing skill authority creep.</li>
-<li>Ignoring refusal events.</li>
-<li>Collecting policy metrics but not reviewing them.</li>
-<li>Weakening HITL enforcement.</li>
-</ol>
-<p>Governance discipline must remain</p>
+<p>These rules define the non-negotiable architecture of governance in SAGT.</p>
 
 
 
