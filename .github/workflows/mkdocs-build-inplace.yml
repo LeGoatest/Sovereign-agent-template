@@ -2,9 +2,9 @@ name: Build MkDocs (Material) in gh-pages branch
 
 on:
   push:
-    branches: [ "gh-pages" ]
+    branches: ["gh-pages"]
     paths-ignore:
-      - "src/**"          # prevent infinite loop (workflow commits docs/)
+      - "docs/**"         # prevent infinite loop (workflow commits built site)
   workflow_dispatch:
 
 permissions:
@@ -21,12 +21,6 @@ jobs:
           ref: gh-pages
           fetch-depth: 0
 
-      - name: Checkout main into _main
-        run: |
-          rm -rf _main
-          git fetch origin main --depth=1
-          git worktree add _main origin/main
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -38,10 +32,12 @@ jobs:
       - name: Build site into docs/
         run: mkdocs build --clean
 
-      - name: Commit built site (site/)
+      - name: Commit built site (docs/)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs mkdocs.yml src requirements.txt
-          git commit -m "src: build mkdocs docs" || echo "No changes to commit"
+
+          git add -A
+
+          git commit -m "docs: build mkdocs site" || echo "No changes to commit"
           git push origin gh-pages
