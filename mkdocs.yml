@@ -4,9 +4,6 @@ site_url: https://legoatest.github.io/Sovereign-agent-template/
 repo_url: https://github.com/LeGoatest/Sovereign-agent-template
 repo_name: LeGoatest/Sovereign-agent-template
 
-# IMPORTANT:
-# - mkdocs source lives in src/
-# - built site outputs to docs/ (so GitHub Pages can serve /docs)
 docs_dir: src
 site_dir: docs
 
@@ -36,6 +33,7 @@ theme:
     - toc.follow
     - search.suggest
     - search.highlight
+    - content.tabs.link
 
 plugins:
   - search
@@ -47,22 +45,57 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
 
 nav:
   - Home: index.md
+
+  - Overview:
+      - Introduction: overview/introduction.md
+      - Core Principles: overview/principles.md
+      - Execution Lifecycle: overview/execution-lifecycle.md
+
   - Canon:
       - Architecture Index: canon/ARCHITECTURE_INDEX.md
       - Architecture Rules: canon/ARCHITECTURE_RULES.md
-      - Security Model: canon/SECURITY_MODEL.md
+      - Security Model: canon/security-model.md
+      - Protected Zones: canon/protected-zones.md
+      - Canon Mutation: canon/mutation.md
+      - Rule Schema v2: canon/rule-schema-v2.md
+      - Canon Compiler: canon/compiler.md
       - Decisions: canon/DECISIONS.md
       - Terminology: canon/TERMINOLOGY.md
       - Doc Style: canon/DOC_STYLE.md
       - Enforcement Matrix: canon/ENFORCEMENT_MATRIX.md
+
+  - Governance:
+      - Task Groups: governance/task-groups.md
+      - Skills: governance/skills.md
+      - Spec Workflow: governance/spec-workflow.md
+      - Human-in-the-Loop: governance/hitl.md
+      - Shadow Architecture: governance/shadow-architecture.md
+      - Handover Protocol: governance/handover.md
+
+  - Policy:
+      - Policy Engine: policy/index.md
+
+  - Reference:
+      - Determinism: reference/determinism.md
+      - Refusal Model: reference/refusal-model.md
+
+  - Operations:
+      - Operational Playbook: operations/playbook.md
+      - Governance Maturity Model: operations/maturity-model.md
+      - Stress Scenarios: operations/stress-scenarios.md
+      - Compliance Mapping: operations/compliance-mapping.md
+      - Adoption Guide: operations/adoption-guide.md
+
   - Jules:
       - JULES: jules/JULES.md
       - Task Groups: jules/TASK_GROUPS.md
       - Skills Index: jules/SKILLS_INDEX.md
+
   - Root Files:
       - NEW_PROJECT: root/NEW_PROJECT.md
       - BOOTSTRAP: root/BOOTSTRAP.md
-```0
