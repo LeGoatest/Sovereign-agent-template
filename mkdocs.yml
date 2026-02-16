@@ -5,13 +5,29 @@ repo_url: https://github.com/LeGoatest/Sovereign-agent-template
 repo_name: LeGoatest/Sovereign-agent-template
 
 # IMPORTANT:
-# - mkdocs source lives in mkdocs-src/
+# - mkdocs source lives in src/
 # - built site outputs to docs/ (so GitHub Pages can serve /docs)
 docs_dir: src
 site_dir: docs
 
 theme:
   name: material
+
+  palette:
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    - scheme: default
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
   features:
     - navigation.sections
     - navigation.top
@@ -49,3 +65,4 @@ nav:
   - Root Files:
       - NEW_PROJECT: root/NEW_PROJECT.md
       - BOOTSTRAP: root/BOOTSTRAP.md
+```0
