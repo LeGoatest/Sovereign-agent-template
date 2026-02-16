@@ -57,6 +57,7 @@ nav:
       - Execution Lifecycle: overview/execution-lifecycle.md
 
   - Canon:
+      - Introduction: canon/index.md
       - Architecture Index: canon/ARCHITECTURE_INDEX.md
       - Architecture Rules: canon/ARCHITECTURE_RULES.md
       - Security Model: canon/security-model.md
