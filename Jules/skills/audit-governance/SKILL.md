@@ -5,9 +5,9 @@ metadata:
   category: audit
   authority: procedural
   requires:
-    - ARCHITECTURE_RULES.md
-    - SECURITY_MODEL.md
-    - ENFORCEMENT_MATRIX.md
+    - src/canon/ARCHITECTURE_RULES.md
+    - src/canon/SECURITY_MODEL.md
+    - src/canon/ENFORCEMENT_MATRIX.md
 ---
 
 # Skill: audit-governance
@@ -26,7 +26,7 @@ Identify the scope of the audit:
 - **Thematic Audit**: Scan specifically for one rule (e.g., "Security Model compliance").
 
 ### Step 2: Rule Mapping
-1. Read the `ARCHITECTURE_RULES.md` and `SECURITY_MODEL.md`.
+1. Read the `src/canon/ARCHITECTURE_RULES.md` and `src/canon/SECURITY_MODEL.md`.
 2. Extract the active invariants (e.g., "No direct DB access from Port layer").
 3. Create a temporary checklist of these rules for the target files.
 
@@ -38,7 +38,7 @@ For each file in scope:
 - **Dead Canon TTL Check**: Review `.jtasks` history for Canon Citations.
   - Any rule not cited within 180 days MUST be flagged for "Deprecation Review".
   - MUST NOT be auto-deleted.
-- Identify "Ghost Architecture" (patterns that exist in code but aren't in `docs/`).
+- Identify "Ghost Architecture" (patterns that exist in code but aren't in `src/`).
 
 ### Step 4: Output Audit Report
 Produce an `AUDIT_REPORT.md` (usually in the current `.jtasks` folder or root).
@@ -53,6 +53,6 @@ Produce an `AUDIT_REPORT.md` (usually in the current `.jtasks` folder or root).
 If any **Critical** violations are found, the Agent MUST STOP and present the report to the user. Do not attempt to fix violations unless specifically instructed via a new task.
 
 ## Guidelines
-- Trust the `ENFORCEMENT_MATRIX.md` to determine how strictly a rule should be applied.
+- Trust the `src/canon/ENFORCEMENT_MATRIX.md` to determine how strictly a rule should be applied.
 - Look for "Import violations" as the most common source of architectural drift.
 - Check for unhandled errors or missing security middleware in `Port` layers.

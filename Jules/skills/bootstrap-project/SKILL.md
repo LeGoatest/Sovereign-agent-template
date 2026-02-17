@@ -31,7 +31,7 @@ Do not use when:
 1) **Inventory Scan:**
    - Enumerate top-level folders and key packages.
    - Detect primary language and build systems (e.g., `go.mod`, `package.json`, `Makefile`).
-   - Identify existing documentation (README, `docs/`).
+   - Identify existing documentation (README, `src/`).
 2) **Gap Analysis:**
    - Compare current state against the [Sovereign Agent Template structure](../../../README.md).
    - Identify missing canonical docs (Rules, Security, Index).
@@ -40,14 +40,14 @@ Do not use when:
 **Output:** `GAP_REPORT.md` (detailing evidence found and missing components).
 
 ### Step 2: Generate Proposed Project Profile
-Draft a `docs/PROJECT_PROFILE.md` based strictly on repo evidence.
+Draft a `src/canon/PROJECT_PROFILE.md` based strictly on repo evidence.
 Label it clearly as **[DRAFT - NEEDS HUMAN VALIDATION]**.
 
 ### Step 3: Output Proposed Canon (DRAFT)
-Generate drafts for missing canon docs:
-- `docs/ARCHITECTURE_RULES.md`
-- `docs/SECURITY_MODEL.md`
-- `docs/ARCHITECTURE_INDEX.md`
+Generate drafts for missing canon docs in `src/canon/`:
+- `src/canon/ARCHITECTURE_RULES.md`
+- `src/canon/SECURITY_MODEL.md`
+- `src/canon/ARCHITECTURE_INDEX.md`
 
 **Anti-Hallucination Rule (Mandatory):**
 - When drafting canonical documents (especially `SECURITY_MODEL.md`):
