@@ -15,9 +15,9 @@
   <p align="center">
     A formalized contract-governed multi-plane execution constitution for AI coding agents.
     <br />
-    <a href="docs/ARCHITECTURE_INDEX.md"><strong>Explore the docs »</strong></a>
+    <a href="src/canon/ARCHITECTURE_INDEX.md"><strong>Explore the docs »</strong></a>
     &middot;
-    <a href="docs/SAGT_OVERVIEW.md">View Handbook</a>
+    <a href="src/reference/SAGT_OVERVIEW.md">View Handbook</a>
     <br />
     <br />
     <a href="BOOTSTRAP.md">Bootstrap Project</a>
@@ -70,6 +70,7 @@ Beyond basic mechanics, SAGT enforces sophisticated organizational invariants:
 - **INVARIANT_MODEL.md**: Documents core system truths that must be preserved.
 - **MUTATION_PROCESS.md**: Establishes a formal process for constitutional/canon amendments.
 - **VERSION_LOCKING.md**: Ensures stability and anchors execution to specific canon states.
+- **STATE_MACHINE.md**: Definitive states and transitions for the Agent.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,27 +95,28 @@ To implement SAGT in your project:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-SAGT defines a strict **Governance Hierarchy**. All work must comply with the hierarchy defined in `docs/ARCHITECTURE_INDEX.md`.
+SAGT defines a strict **Governance Hierarchy**. All work must comply with the hierarchy defined in `src/canon/ARCHITECTURE_INDEX.md`.
 
-1.  **ARCHITECTURE_RULES.md**: The supreme law of the project.
-2.  **SYSTEM_AXIOMS.md**: The philosophical invariants.
-3.  **SAGT_OVERVIEW.md**: The Handbook. Complete structural guide.
-4.  **SECURITY_MODEL.md**: The trust and safety boundary.
-5.  **INVARIANT_MODEL.md**: The immutability layer.
-6.  **CONTRACT_MODEL.md**: Cross-plane communication.
-7.  **ARCHITECTURE_INDEX.md**: The governance registry.
-8.  **MUTATION_PROCESS.md**: Protocol for changing the law.
-9.  **VERSION_LOCKING.md**: Anchoring to specific canon states.
-10. **DECISIONS.md**: Architectural record.
-11. **TERMINOLOGY.md**: Project glossary.
-12. **DOC_STYLE.md**: Documentation standards.
-13. **ENFORCEMENT_MATRIX.md**: The strictness scale.
-14. **WDBASIC.md**: Frontend philosophy.
-15. **JULES.md**: Agent operating instructions.
-16. **TASK_GROUPS.md**: Permission registry.
-17. **SKILLS_INDEX.md**: Procedural registry.
-18. **SKILL.md files**: Approved playbooks.
-19. **Spec files (.jtasks)**: Specific iteration work orders.
+1.  **src/canon/ARCHITECTURE_RULES.md**: The supreme law of the project.
+2.  **src/canon/SYSTEM_AXIOMS.md**: The philosophical invariants.
+3.  **src/reference/SAGT_OVERVIEW.md**: The Handbook. Complete structural guide.
+4.  **src/canon/SECURITY_MODEL.md**: The trust and safety boundary.
+5.  **src/canon/INVARIANT_MODEL.md**: The immutability layer.
+6.  **src/canon/CONTRACT_MODEL.md**: Cross-plane communication.
+7.  **src/canon/ARCHITECTURE_INDEX.md**: The governance registry.
+8.  **src/canon/MUTATION_PROCESS.md**: Protocol for changing the law.
+9.  **src/canon/VERSION_LOCKING.md**: Anchoring to specific canon states.
+10. **src/canon/DECISIONS.md**: Architectural record.
+11. **src/canon/TERMINOLOGY.md**: Project glossary.
+12. **src/canon/DOC_STYLE.md**: Documentation standards.
+13. **src/canon/WDBASIC.md**: Frontend philosophy.
+14. **src/governance/state-machine.md**: Deterministic agent states.
+15. **src/governance/deep-governance-mode.md**: High-risk validation loop.
+16. **Jules/JULES.md**: Agent operating instructions.
+17. **Jules/TASK_GROUPS.md**: Permission registry.
+18. **Jules/SKILLS_INDEX.md**: Procedural registry.
+19. **SKILL.md files**: Approved playbooks.
+20. **Spec files (.jtasks)**: Specific iteration work orders.
 
 The Agent MUST refuse any request that violates the canon or implies undocumented architectural drift. **Refusal is a sign of system integrity.**
 
@@ -123,8 +125,9 @@ The Agent MUST refuse any request that violates the canon or implies undocumente
 <!-- REPOSITORY STRUCTURE -->
 ## Repository Structure
 
-- `docs/` -> Canonical architecture and governance law.
+- `src/` -> Functional governance zones (Canon, Governance, Policy, Reference).
 - `Jules/` -> Agent operating instructions and procedural skills (compliant with `agentskills.io`).
+- `tools/` -> Governance integrity and validation tooling.
 - `.jtasks/` -> Deterministic planning and execution records.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -132,7 +135,7 @@ The Agent MUST refuse any request that violates the canon or implies undocumente
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] SAGT v2.0 Specification
+- [x] SAGT v3.0 Multi-Zone Architecture
 - [x] Deterministic Planning Protocol (.jtasks)
 - [ ] Multi-Agent Coordination Protocol
 - [ ] Automated Governance Auditing

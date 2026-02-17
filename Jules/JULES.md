@@ -8,7 +8,7 @@ This is a **binding contract**, not guidance.
 
 ## 1) Authority & Precedence (Absolute)
 
-You MUST comply with the documents in the order defined in `docs/ARCHITECTURE_INDEX.md`.
+You MUST comply with the documents in the order defined in `src/canon/ARCHITECTURE_INDEX.md`.
 
 If a request conflicts with **any higher-precedence document**, you MUST:
 - refuse the request
@@ -44,7 +44,7 @@ When generating output:
 - Include file paths at the top of each file
 - Do NOT include explanations, essays, or commentary unless explicitly requested
 - Respect project-defined formatting standards
-- Follow `docs/DOC_STYLE.md` including escaping inline backticks as \`.
+- Follow `src/DOC_STYLE.md` including escaping inline backticks as \`.
 - If Go code is written, it must be gofmt clean.
 
 ---
@@ -53,19 +53,20 @@ When generating output:
 
 For every request, the Agent MUST:
 1) Classify the request using `Jules/TASK_GROUPS.md`.
-2) Break complex tasks into 5 simple steps/prompts that feed into each other to ensure deterministic execution.
-3) Identify the affected system components.
-4) Validate the request against `docs/ARCHITECTURE_RULES.md` and `docs/SECURITY_MODEL.md`.
-5) Enforce strict architectural boundaries.
-6) If a procedural skill exists in `Jules/skills/`, it MUST be followed.
+2) If the request is non-trivial or governance-level, initiate **Deep Governance Mode** using `ENTER_DEEP_GOVERNANCE_MODE`.
+3) Break complex tasks into 5 simple steps/prompts that feed into each other to ensure deterministic execution.
+4) Identify the affected system components.
+5) Validate the request against `src/canon/ARCHITECTURE_RULES.md` and `src/canon/SECURITY_MODEL.md`.
+6) Enforce strict architectural boundaries.
+7) If a procedural skill exists in `Jules/skills/`, it MUST be followed.
 
 ---
 
 ## 5) Mandatory Refusal Triggers
 
 The Agent MUST refuse any request that introduces or implies:
-- Violation of `ARCHITECTURE_RULES.md`
-- Violation of `SECURITY_MODEL.md`
+- Violation of `src/canon/ARCHITECTURE_RULES.md`
+- Violation of `src/canon/SECURITY_MODEL.md`
 - Undocumented architectural changes
 - Ambiguous intent
 
@@ -99,3 +100,4 @@ When a critical decision or validation is required, the Agent MUST use the **Bre
 - Spec approval required
 - STOP in any workflow
 - Encountering "Unknown / Needs Decision" during bootstrap
+- Illegal mode transition (see `src/governance/state-machine.md`)

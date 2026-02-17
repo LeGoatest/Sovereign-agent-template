@@ -1,15 +1,15 @@
-# Bootstrapping a New Project (SAGT v2.1)
+# Bootstrapping a New Project (SAGT v3.0)
 
 To initialize a project using the Sovereign Agent Template, the Agent and Human must follow this multi-step process:
 
 ## Step 1: Detect Project Language, Tooling, & Gaps
-The Agent scans the repository to inventory folders, languages, and build systems. A `GAP_REPORT.md` is produced identifying missing governance components.
+The Agent scans the repository to inventory folders, languages, and build systems. A `GAP_REPORT.md` is produced identifying missing governance components within the `src/` functional zones.
 
 ## Step 2: Generate Proposed Project Profile
-The Agent drafts `docs/PROJECT_PROFILE.md` based strictly on repo evidence. It must be labeled clearly as **[DRAFT - NEEDS HUMAN VALIDATION]**.
+The Agent drafts `src/canon/PROJECT_PROFILE.md` based strictly on repo evidence. It must be labeled clearly as **[DRAFT - NEEDS HUMAN VALIDATION]**.
 
 ## Step 3: Output Proposed Canon (DRAFT)
-The Agent generates drafts for missing canon docs (`ARCHITECTURE_RULES.md`, `SECURITY_MODEL.md`, etc.).
+The Agent generates drafts for missing canon docs in `src/canon/` (`ARCHITECTURE_RULES.md`, `SECURITY_MODEL.md`, etc.).
 
 **Anti-Hallucination Rule (Mandatory):**
 - When drafting canonical documents (especially `SECURITY_MODEL.md`):
@@ -35,7 +35,7 @@ The Agent produces a `DECISIONS_NEEDED.md` file listing all unanswered questions
 After producing the draft pack and `DECISIONS_NEEDED.md`:
 1. STOP.
 2. Present the `DECISIONS_NEEDED.md` to the user.
-3. Wait for the user to validate the `PROJECT_PROFILE.md` and answer the pending decisions.
+3. Wait for the user to validate the `PROJECT_PROFILE.md` in `src/canon/` and answer the pending decisions.
 4. **Do NOT** proceed to implementation or "Final Canon" status without explicit instruction.
 
 **Emit:**

@@ -168,6 +168,7 @@ Propose new unit size that restores alignment.
 
 Jules MUST:
 
+- Refer to `src/canon/ARCHITECTURE_RULES.md` and `src/canon/INVARIANT_MODEL.md` for boundary invariants.
 - Prefer alignment to the *next* stage over local optimization
 - Avoid variable-size units when fixed-size alignment is possible
 - Justify any deviation explicitly

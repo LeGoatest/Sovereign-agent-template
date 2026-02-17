@@ -5,7 +5,7 @@ metadata:
   category: docs
   authority: procedural
   requires:
-    - ARCHITECTURE_RULES.md
+    - src/canon/ARCHITECTURE_RULES.md
     - JULES.md
     - TASK_GROUPS.md
     - SKILLS_INDEX.md
@@ -36,10 +36,10 @@ Use templates from `.jtasks/_template/`.
 2. If classification is `architecture`, STOP.
 
 ### B) Generate Spec Files
-1. Create the timestamped folder.
+1. Create the timestamped folder (ISO 8601).
 2. Fill `GAP_REPORT.md` identifying the current state vs. desired state.
 3. Fill `requirements.md` (EARS form).
-4. Fill `design.md` referencing canonical docs.
+4. Fill `design.md` referencing canonical docs in `src/canon/`.
 5. Generate `tasks.md` with checkbox tasks.
 
 ### C) Task Authoring Rules
