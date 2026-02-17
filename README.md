@@ -79,7 +79,7 @@ Beyond basic mechanics, SAGT enforces sophisticated organizational invariants:
 ### Prerequisites
 The Canon Compiler requires `PyYAML`:
 ```sh
-pip install PyYAML
+pip install -r requirements.txt
 ```
 
 ### Installation

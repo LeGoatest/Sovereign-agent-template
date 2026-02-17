@@ -49,7 +49,7 @@ Canonical documents may contain structured `yaml sagrule` blocks. These blocks t
 
 ## 4. The Spec-First Workflow (\`.jtasks\`)
 
-For non-trivial work, SAGT mandates a **Spec-First** approach. Work is tracked in timestamped directories (\`YY:MM:DD:HH:MM:SS\`) within the \`.jtasks/\` folder.
+For non-trivial work, SAGT mandates a **Spec-First** approach. Work is tracked in timestamped directories (ISO 8601: \`YYYY-MM-DDTHH-MM-SS\`) within the \`.jtasks/\` folder.
 
 - **GAP_REPORT.md**: Identifies the distance between current state and desired state.
 - **requirements.md**: Defines user needs using structured forms (e.g., EARS).
@@ -112,7 +112,7 @@ Skills in SAGT are modular, project-agnostic playbooks compliant with the **Agen
 
 ### .jtasks/ (Execution Plane)
 - \`_template/\`: Standard templates for the Spec-First workflow.
-- \`YY:MM:DD:HH:MM:SS/\`: Individual iteration records (ignored by git if preferred, or tracked for history).
+- \`YYYY-MM-DDTHH-MM-SS/\`: Individual iteration records (ignored by git if preferred, or tracked for history).
 
 ---
 
