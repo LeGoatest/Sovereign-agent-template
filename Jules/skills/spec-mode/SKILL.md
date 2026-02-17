@@ -21,7 +21,7 @@ Provide a deterministic workflow to:
 
 ## Workspace Layout
 Create:
-- `.jtasks/YY:MM:DD:HH:MM:SS/`
+- `.jtasks/YYYY-MM-DDTHH-MM-SS/` (ISO 8601)
   - GAP_REPORT.md
   - requirements.md
   - design.md
