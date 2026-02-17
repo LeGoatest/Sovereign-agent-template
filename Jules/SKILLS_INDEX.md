@@ -118,6 +118,17 @@ This repository follows the **Agent Skills** specification for modular procedura
 **Reads first:**
 - PROJECT_PROFILE.md
 
+### tailwindcss-cli/SKILL.md
+**Use when:**
+- setting up or modifying TailwindCSS build pipeline
+- configuring CSS output to assets/css/style.css
+- installing TailwindCSS v4 CLI
+
+**Task group:** operations
+
+**Reads first:**
+- PROJECT_PROFILE.md
+
 ### context-pruning/SKILL.md
 **Use when:**
 - producing a non-canonical docs/MINI_CANON.md to reduce token bloat
